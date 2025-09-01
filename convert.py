@@ -2,6 +2,8 @@
 import xml.etree.ElementTree as ET
 import json
 import re
+import sys
+import os
 
 def get_text_from_element(element):
     if element is None:
@@ -21,8 +23,31 @@ def parse_table(table_element, namespaces):
     return rows
 
 def main():
-    xml_file = 'data/metadata_std.xml'
-    json_file = 'data/metadata_std.json'
+    # Default file paths
+    default_xml = 'data/metadata_std.xml'
+    default_json = 'data/metadata_std.json'
+    
+    # Check command line arguments
+    if len(sys.argv) == 3:
+        xml_file = sys.argv[1]
+        json_file = sys.argv[2]
+    elif len(sys.argv) == 2:
+        xml_file = sys.argv[1]
+        # Generate output filename based on input
+        base_name = os.path.splitext(os.path.basename(xml_file))[0]
+        dir_name = os.path.dirname(xml_file) or 'data'
+        json_file = os.path.join(dir_name, f"{base_name}.json")
+    else:
+        xml_file = default_xml
+        json_file = default_json
+    
+    # Check if input file exists
+    if not os.path.exists(xml_file):
+        print(f"Error: Input file '{xml_file}' not found.")
+        print("Usage: python convert.py [input.xml] [output.json]")
+        print("       python convert.py [input.xml]  # Output will be auto-generated")
+        print("       python convert.py              # Uses default files")
+        return
 
     namespaces = {
         'office': 'urn:oasis:names:tc:opendocument:xmlns:office:1.0',
