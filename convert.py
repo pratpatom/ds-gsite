@@ -40,17 +40,15 @@ def main():
 
     elements = list(office_text)
     
-    # Find all tables and their preceding titles
     tables = {}
     for i, elem in enumerate(elements):
         if elem.tag == f"{{{namespaces['table']}}}table":
             table_name = elem.get(f"{{{namespaces['table']}}}name")
             title = table_name
-            # Look for a preceding <text:p> as title
             if i > 0 and elements[i-1].tag == f"{{{namespaces['text']}}}p":
                 p_text = get_text_from_element(elements[i-1])
                 if p_text:
-                    title = p_text
+                    title = p_text.strip()
             if table_name:
                 tables[table_name] = {"element": elem, "title": title}
 
@@ -58,7 +56,6 @@ def main():
     for name, table_info in tables.items():
         parsed_tables[name] = parse_table(table_info['element'], namespaces)
 
-    # Process lookup tables
     lookups = {}
     for table_name, table_info in tables.items():
         title = table_info['title']
@@ -72,8 +69,11 @@ def main():
                 if match:
                     technical_name = match.group(1).strip()
                     lookups[technical_name] = options
+                
+                cleaned_title = re.sub(r'\s*\([^)]*\)', '', title).strip()
+                lookups[title] = options
+                lookups[cleaned_title] = options
 
-    # Process the main table (Table1)
     main_table_data = parsed_tables.get('Table1')
     if not main_table_data:
         print("Error: Main table 'Table1' not found.")
@@ -83,11 +83,13 @@ def main():
     main_metadata = {}
 
     for row in main_table_data[1:]:
-        if not any(row): # Skip empty rows
+        if not any(row):
             continue
         row_dict = dict(zip(header, row))
         technical_name = row_dict.get('ชื่อทางเทคนิค')
         if technical_name:
+            technical_name = re.sub(r'\s+', '', technical_name)
+            
             main_metadata[technical_name] = {
                 "ลำดับ": row_dict.get("ลำดับ"),
                 "ชื่อรายการไทย": row_dict.get("ชื่อรายการไทย"),
@@ -95,10 +97,23 @@ def main():
                 "ตัวเลือก/รูปแบบ": row_dict.get("ตัวเลือก/รูปแบบ"),
                 "ตัวอย่าง": row_dict.get("ตัวอย่าง"),
             }
+            
             if technical_name in lookups:
                 main_metadata[technical_name]['options'] = lookups[technical_name]
+            else:
+                options_text = row_dict.get("ตัวเลือก/รูปแบบ", "")
+                match = re.search(r'“([^”]+)”', options_text)
+                if match:
+                    lookup_key = match.group(1).strip().replace('\n', ' ')
+                    lookup_key = re.sub(r'\s+', ' ', lookup_key)
+                    
+                    for key, value in lookups.items():
+                        cleaned_key = re.sub(r'\s*\([^)]*\)', '', key).strip()
+                        cleaned_key = re.sub(r'\s+', ' ', cleaned_key)
+                        if lookup_key == cleaned_key:
+                            main_metadata[technical_name]['options'] = value
+                            break
 
-    # Write to JSON
     with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(main_metadata, f, ensure_ascii=False, indent=2)
 
