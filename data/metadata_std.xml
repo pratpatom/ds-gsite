@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<office:document-content xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" office:version="1.2">
+  <office:font-face-decls>
+    <style:font-face style:name="Courier New" style:font-family-generic="modern" style:font-pitch="fixed" svg:font-family="'Courier New'" />
+  </office:font-face-decls>
+  <office:automatic-styles>
+    <text:list-style style:name="L1">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="1" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L2">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="2" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L3">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="3" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L4">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="4" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L5">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="5" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L6">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="6" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L7">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="7" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L8">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="8" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L9">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="10" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L10">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="11" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L11">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="12" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L12">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="13" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L13">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="14" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L14">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="15" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L15">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="16" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L16">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="17" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L17">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="18" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L18">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="19" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L19">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="20" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L20">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="21" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L21">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="22" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L22">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="23" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L23">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="24" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L24">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="25" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L25">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="26" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <text:list-style style:name="L26">
+      <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-format="1" text:start-value="27" style:num-suffix=".">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment" fo:text-align="right">
+          <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="0.5in" fo:text-indent="-0.25in" fo:margin-left="0.5in" />
+        </style:list-level-properties>
+      </text:list-level-style-number>
+    </text:list-style>
+    <style:style style:name="T1" style:family="text"><style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" /></style:style>
+    <style:style style:name="T2" style:family="text"><style:text-properties style:text-position="super 58%" /></style:style>
+    <style:style style:name="fr2" style:family="graphic" style:parent-style-name="Formula"><style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="center" style:horizontal-rel="paragraph-content" style:wrap="none" /></style:style>
+    <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Formula"><style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" /></style:style>
+    <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+    </style:style>
+    <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+    </style:style>
+    <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L3">
+    </style:style>
+    <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L4">
+    </style:style>
+    <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L5">
+    </style:style>
+    <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6">
+    </style:style>
+    <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L7">
+    </style:style>
+    <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L8">
+    </style:style>
+    <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L9">
+    </style:style>
+    <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L10">
+    </style:style>
+    <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L11">
+    </style:style>
+    <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L12">
+    </style:style>
+    <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L13">
+    </style:style>
+    <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L14">
+    </style:style>
+    <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L15">
+    </style:style>
+    <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L16">
+    </style:style>
+    <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L17">
+    </style:style>
+    <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L18">
+    </style:style>
+    <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L19">
+    </style:style>
+    <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L20">
+    </style:style>
+    <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L21">
+    </style:style>
+    <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L22">
+    </style:style>
+    <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L23">
+    </style:style>
+    <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L24">
+    </style:style>
+    <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L25">
+    </style:style>
+    <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L26">
+    </style:style>
+    <style:style style:name="TableHeaderRowCell" style:family="table-cell">
+      <style:table-cell-properties fo:border="none" />
+    </style:style>
+    <style:style style:name="TableRowCell" style:family="table-cell">
+      <style:table-cell-properties fo:border="none" />
+    </style:style>
+    <style:style style:name="Table1" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table1.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="4554*" />
+    </style:style>
+    <style:style style:name="Table1.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="7504*" />
+    </style:style>
+    <style:style style:name="Table1.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="14058*" />
+    </style:style>
+    <style:style style:name="Table1.D" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="9260*" />
+    </style:style>
+    <style:style style:name="Table1.E" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="14534*" />
+    </style:style>
+    <style:style style:name="Table1.F" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="15622*" />
+    </style:style>
+    <style:style style:name="Table2" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table2.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="32572*" />
+    </style:style>
+    <style:style style:name="Table2.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="32962*" />
+    </style:style>
+    <style:style style:name="Table3" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table3.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="14998*" />
+    </style:style>
+    <style:style style:name="Table3.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="50536*" />
+    </style:style>
+    <style:style style:name="Table4" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table4.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="15004*" />
+    </style:style>
+    <style:style style:name="Table4.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25505*" />
+    </style:style>
+    <style:style style:name="Table4.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+    <style:style style:name="Table5" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table5.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="14998*" />
+    </style:style>
+    <style:style style:name="Table5.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="50536*" />
+    </style:style>
+    <style:style style:name="Table6" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table6.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="15004*" />
+    </style:style>
+    <style:style style:name="Table6.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25505*" />
+    </style:style>
+    <style:style style:name="Table6.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+    <style:style style:name="Table7" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table7.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="15004*" />
+    </style:style>
+    <style:style style:name="Table7.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25505*" />
+    </style:style>
+    <style:style style:name="Table7.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+    <style:style style:name="Table8" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table8.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="13567*" />
+    </style:style>
+    <style:style style:name="Table8.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="26942*" />
+    </style:style>
+    <style:style style:name="Table8.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+    <style:style style:name="Table9" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table9.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="13567*" />
+    </style:style>
+    <style:style style:name="Table9.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="26942*" />
+    </style:style>
+    <style:style style:name="Table9.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+    <style:style style:name="Table10" style:family="table">
+      <style:table-properties table:align="center" style:rel-width="100%" />
+    </style:style>
+    <style:style style:name="Table10.A" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="13567*" />
+    </style:style>
+    <style:style style:name="Table10.B" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="26942*" />
+    </style:style>
+    <style:style style:name="Table10.C" style:family="table-column">
+      <style:table-column-properties style:rel-column-width="25024*" />
+    </style:style>
+  </office:automatic-styles>
+<office:body>
+<office:text>
+<table:table table:name="Table1" table:style-name="Table1">
+  <table:table-column table:style-name="Table1.A" />
+  <table:table-column table:style-name="Table1.B" />
+  <table:table-column table:style-name="Table1.C" />
+  <table:table-column table:style-name="Table1.D" />
+  <table:table-column table:style-name="Table1.E" />
+  <table:table-column table:style-name="Table1.F" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">ลำดับ</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">ชื่อรายการไทย</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">ชื่อทางเทคนิค</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">คำอธิบาย</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">ตัวเลือก/รูปแบบ</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="T1">ตัวอย่าง</text:span></text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L1">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ประเภทข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_type</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชุดข้อมูลนี้เป็นข้อมูลประเภทใด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก<text:line-break />ดูรายละเอียด
+      “รายการที่ 1 ประเภทข้อมูล”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลสถิติ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L2">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อชุดข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">title</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อของชุดข้อมูลที่กำหนดโดย
+      องค์กรที่รับผิดชอบข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (150
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">dir_ita_01</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L3">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อองค์กร</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Org_standard
+      _name</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อองค์กรที่รับผิดชอบข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (255
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ITA</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L4">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อผู้ติดต่อ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">maintainer</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชื่อกอง สำนัก หรือฝ่าย
+      ที่ได้รับการมอบหมายให้รับผิดชอบข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (150
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">กองนวัตกรรมและวิจัย<text:line-break />กลุ่มเทคโนโลยีสารสนเทศและปัญญาประดิษฐ์</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L5">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อีเมล์ผู้ติดต่อ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">maintainer_email</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อีเมลกอง สำนัก
+      หรือฝ่าย ที่ได้รับการมอบหมายให้รับผิดชอบข้อมูล
+      และต้องเป็นอีเมลภาครัฐ(DDCmail)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (50
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">dir.hrd@ddc.mail.go.th</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L6">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">คำสำคัญ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">tag_string</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หัวข้อ คำ วลี หรือแท็ก
+      (tag) ที่ใช้ระบุคำสำคัญในชุดข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text แยกแต่ละkeywords
+      ด้วย “,” (comma) (200 Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แรงงาน,
+      กำลังแรงงาน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L7">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">รายละเอียด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">notes</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">คำอธิบายรายละเอียดที่สำคัญ
+      ของชุดข้อมูลอย่างสั้น เช่น คำนิยาม ชุดข้อมูลเกี่ยวกับอะไร
+      มีวิธีการจัดเก็บแบบใด กลุ่มเป้าหมายผู้ใช้งานข้อมูล
+      เป็นใคร</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (1,000
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L8">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วัตถุประสงค์</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">objective</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อธิบายที่มาและวัตถุประสงค์ของ
+      การจัดทำชุดข้อมูล เช่น กฎหมาย ภารกิจ โครงการตามแผนยุทธศาสตร์
+      และเพื่อใช้ในการ วิเคราะห์หรือตอบโจทย์ใน
+      ประเด็นยุทธศาสตร์ในเรื่องใดที่ ผู้ใช้ต้องการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">พันธกิจหน่วยงาน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">9.1</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หน่วยความถี่ของการปรับปรุงข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">update_frequency
+      _unit</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สำหรับข้อมูลระเบียน
+      และข้อมูล</text:p><text:p text:style-name="Table_20_Contents">ภูมิสารสนเทศเชิงพื้นที่
+      :
+      ความถี่</text:p><text:p text:style-name="Table_20_Contents">ที่ข้อมูลในระบบคลังข้อมูลถูก</text:p><text:p text:style-name="Table_20_Contents">ปรับปรุง/เพิ่ม
+      หรือเปลี่ยนแปลง</text:p><text:p text:style-name="Table_20_Contents">สำหรับข้อมูลสถิติ:
+      ความถี่ในการ</text:p><text:p text:style-name="Table_20_Contents">เผยแพร่ต่อผู้ใช้ข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 9.1
+      หน่วยความถี่ของการปรับปรุง”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไตรมาส</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">9.2</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ค่าความถี่ของการปรับปรุงข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">update_frequency
+      _interval</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ใช้คุณสมบัตินี้ประกอบกับหน่วย
+      ความถี่ในการปรับปรุงข้อมูล ตัวอย่างเช่น ถ้าชุดข้อมูลมีการ
+      ปรับปรุงทุก ๆ 2 ปี ท่านสามารถ ใส่ “2” สำหรับค่าความถี่ และ “รายปี”
+      สำหรับหน่วยความถี่</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Number หรือ เว้น
+      ว่างไว้</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">1</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L9">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">geo_coverage</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สำหรับข้อมูลระเบียน
+      และข้อมูล ภูมิสารสนเทศเชิงพื้นที่: มิติการ
+      จัดจำแนกข้อมูลพื้นที่ในระดับ ย่อยที่สุดในการจัดเก็บข้อมูล
+      สำหรับข้อมูลสถิติ: มิติการจัด จำแนกข้อมูลพื้นที่ในระดับย่อย
+      ที่สุดในการนำเสนอข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 10
+      ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">จังหวัด</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L10">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แหล่งที่มา</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_source</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แหล่งที่มาของข้อมูลที่นำมา</text:p><text:p text:style-name="Table_20_Contents">จัดทำชุดข้อมูล
+      พร้อมองค์กร</text:p><text:p text:style-name="Table_20_Contents">ที่จัดทำ
+      เช่น
+      สำรวจภาวะการ</text:p><text:p text:style-name="Table_20_Contents">ทำงานของประชากร</text:p><text:p text:style-name="Table_20_Contents">(สำนักงานสถิติแห่งชาติ)</text:p><text:p text:style-name="Table_20_Contents">ฐานข้อมูลทะเบียนราษฎร์</text:p><text:p text:style-name="Table_20_Contents">(กรมการปกครอง)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (200
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ระบบบันทึกข้อมูลนักวิจัยกรมควบคุมโรค
+      (DDC Researcher Data Systems: DRDS)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L11">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">รูปแบบการเก็บข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_format</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">รูปแบบของการจัดเก็บข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 12
+      รูปแบบการเก็บข้อมูล”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">XLS</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L12">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_category</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หมวดหมู่ข้อมูลตามธรรมาภิบาล
+      ข้อมูลภาครัฐ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 13
+      หมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐ”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลส่วนบุคคล</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L13">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สัญญาอนุญาตให้ใช้ข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">license_id</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สัญญาอนุญาตให้ใช้ข้อมูล
+      ต้อง สอดคล้องกับหมวดหมู่ข้อมูลตาม ธรรมาภิบาลข้อมูลภาครัฐ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 14
+      สัญญาอนุญาตให้ใช้ข้อมูล”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Open Data
+      Common</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L14">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เงื่อนไขในการเข้าถึงข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">accessible_condition</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เงื่อนไขเพื่อให้สามารถเข้าถึงหรือใช้ข้อมูลได้
+      ในกรณีที่ เลือกหมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐใน รายการที่
+      13 เป็นข้อมูลใช้ภายใน ข้อมูลความมั่นคง ข้อมูลความลับทางราชการ
+      ข้อมูลส่วนบุคคล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L15">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ปีข้อมูลที่เริ่มต้นจัดทำ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">first_year_of_data</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ปีข้อมูลที่เริ่มต้นจัดทำ
+      ในกรณีความถี่ในการจัดทำ มากกว่าปีละครั้ง ให้ระบุ
+      วันที่หรือเดือนหรือไตรมาสที่ เริ่มต้นจัดทำ เช่น
+      มี.ค./2540</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">DATE: YYYY-MM-DD
+      โดยในกรณีที่ไม่สามารถระบุวัน หรือเดือน ให้แสดงเฉพาะปี (ในรูปแบบปี
+      พ.ศ.) หรือ เดือนที่เลือก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">2565-04-11</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L16">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ปีข้อมูลล่าสุดที่เผยแพร่</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">last_year_of_data</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ปีข้อมูลล่าสุดที่เผยแพร่
+      ในกรณีที่ความถี่ในการ เผยแพร่มากกว่าปีละครั้ง ให้ระบุ
+      วันที่หรือเดือนหรือ ไตรมาสล่าสุดที่เผยแพร่ เช่น
+      มี.ค./2562</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">DATE: YYYY-MM-DD
+      โดยในกรณีที่ไม่สามารถระบุวัน หรือเดือน ให้แสดงเฉพาะปี (ในรูปแบบปี
+      พ.ศ.) หรือ เดือนที่เลือก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">2567-04-11</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L17">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วันที่กำหนดเผยแพร่ข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_release_
+      calendar</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แสดงกำหนดการเผยแพร่วัน
+      เดือน ปี หรือในกรณีที่ สามารถระบุเป็นชั่วโมงหรือนาทีได้ให้ระบุ
+      ทั้งนี้ขึ้นกับ ลักษณะของสถิติทางการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">DATETIME:
+      YYYY-MM-DD-hh-mm ในกรณีกำหนดการเผยแพร่เป็น
+      ปี-เดือนวัน-ชั่วโมง-นาที หากสามารถระบุได้ชัดเจน หรือ
+      ระบุ...........................................
+      ในกรณีที่ไม่สามารถกำหนดเป็นวันเวลาที่ ชัดเจน เช่น ทุกวันที่ 3
+      ของเดือน หรือ เวลา 9.00 น. ของวันที่ 1 ของทุกเดือนเป็นต้น</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">2567-04-10</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L18">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วันที่ปรับปรุงข้อมูลล่าสุด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">last_updated_date</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วัน เดือน ปี
+      ที่ปรับปรุงหรือเผยแพร่ข้อมูลล่าสุด โดย ระบบสร้างขึ้นอัตโนมัติ
+      หรือดึงข้อมูลจากฐานข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">DATE: YYYY-MM-DD
+      ในรูปแบบปี พ.ศ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">2568-03-12</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L19">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">การจัดจำแนก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">disaggregation</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">การจัดจำแนกที่ใช้ในการจัดทำสถิติทางการ
+      เช่น เพศ อายุ ศาสนา ระดับการศึกษา อาชีพ ประเทศ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 20 การจัดจำแนก”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L20">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หน่วยวัด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">unit_of_measure</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หน่วยนับจำนวน เช่น บาท
+      ไร่ ครัวเรือน คน คดี ชิ้น อัน เครื่อง งาน กิโลกรัม กิโลเมตร
+      ต่อประชากร 1,000 คน หรือไม่มีหน่วยในกรณีที่เป็นดัชน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (100
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L21">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หน่วยตัวคูณ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">unit_of_multiplier</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวคูณของหน่วยวัด เช่น
+      ข้อมูลมูลค่าการลงทุน หน่วย: ล้านบาท หน่วยวัดคือ บาท หน่วยตัวคูณคือ
+      1 ล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก
+      ดูรายละเอียด<text:line-break />“รายการที่ 22 หน่วยตัวคูณ”</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L22">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วิธีการคำนวณ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">calculation_method</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วิธีการคำนวณหรือสูตรในการคำนวณที่ใช้ในการจัดทำ
+      สถิติหรือตัวชี้วัด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (500
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L23">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">มาตรฐานการจัดทำข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">standard</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">มาตรฐานต่าง ๆ
+      ทั้งที่เป็นมาตรฐานสากลและมาตรฐาน
+      ในประเทศที่นำมาใช้อ้างอิงในการจัดทำสถิติทางการทั้ง วิธีการจัดทำ
+      รหัส การเผยแพร่ เช่น มาตรฐานการ จัดทำตามSNA, มาตรฐาน ISO,
+      มาตรฐานรหัสTSIC, มาตรฐานรหัสHS มาตรฐานการเผยแพร่ SDDS</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text (200
+      Characters)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L24">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">URL</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">url</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">URL
+      ที่สามารถเข้าถึงชุดข้อมูลได</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text โดยมีชื่อ Domain
+      ที่เป็นทางการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L25">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ภาษาที่ใช้</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">data_language</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ภาษาที่ใช้ในชุดข้อมูล
+      เช่น ภาษาไทย ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตัวเลือก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไทย</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:list text:style-name="L26">
+        <text:list-item>
+        </text:list-item>
+      </text:list>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สถิติทางการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">official_statistics</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อความ
+      หรือตัวเลขที่เป็นตัวแทนแสดงถึงคุณลักษณะ ของสิ่งต่าง ๆ ในประเทศ
+      ที่ประมวลตามความเป็นจริง
+      จากข้อมูลที่เก็บรวบรวมได้ตามหลักวิชาการทางสถิติและเป็นสถิติที่มีความสำคัญต่อการใช้ในการกำหนด
+      นโยบายเพื่อการพัฒนาประเทศ โดยองค์กรที่นำเข้า
+      ข้อมูลไม่ต้องกรอก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Boolean (ใช่ และ
+      ไม่ใช่)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 1 ประเภทข้อมูล
+(data_type)</text:p>
+<table:table table:name="Table2" table:style-name="Table2">
+  <table:table-column table:style-name="Table2.A" />
+  <table:table-column table:style-name="Table2.B" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลระเบียน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลระเบียน (Record)
+      ที่จากระบบฐานข้อมูลทะเบียนหรือจากการบริหารงานของหน่วยงาน
+      และที่ได้จากการสำมะโน/สำรวจด้วยตัวอย่างรวมทั้ง Transaction
+      Dataตัวอย่างเช่น รายการจดทะเบียนธุรกิจ และ
+      รายการจดทะเบียนสรรพสามิต เป็นต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลสถิติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อความหรือตัวเลขที่แสดงผลที่ประมวลจากข้อมูลที่เก็บรวบรวมได้</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลภูมิสารสนเทศเชิงพื้นที่</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลหรือสารสนเทศที่มีความสัมพันธ์กับตำแหน่งในพื้นที่
+      เช่น แผนที่ภาพถ่ายทางอากาศ และภาพถ่ายทาง</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลหลากหลายประเภท</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชุดข้อมูลที่รวบรวมมาจากข้อมูลหลากหลายประเภทมาจัดเป็นชุดข้อมูลตามความต้องการใช้งาน
+      เช่น
+      ชุดข้อมูล</text:p><text:p text:style-name="Table_20_Contents">ที่ประกอบด้วยข้อมูลระเบียน
+      ข้อมูลสถิติ ข้อมูลภาพ เป็นต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลประเภทอื่น
+      ๆ</text:p><text:p text:style-name="Table_20_Contents">ระบุ…</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลนอกเหนือจาก 4
+      ประเภทข้างต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 8 วัตถุประสงค์
+(objective)</text:p>
+<table:table table:name="Table3" table:style-name="Table3">
+  <table:table-column table:style-name="Table3.A" />
+  <table:table-column table:style-name="Table3.B" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ยุทธศาสตร์ชาติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ยุทธศาสตร์ชาติตามกฎหมายว่าด้วยการจัดทำยุทธศาสตร์ชาติ
+      ซึ่งเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาลเพื่อใช้เป็นกรอบในการจัดทาแผนต่าง
+      ๆ
+      ให้สอดคล้องและบูรณาการกันเพื่อให้เกิดเป็นพลังผลักดันร่วมกันไปสู่เป้าหมายดังกล่าว
+      (รัฐธรรมนูญแห่งราชอาณาจักรไทย พ.ศ.2560 หมวด 6 แนวนโยบายแห่งรัฐ
+      มาตรา 65) (แผนระดับที่ 1)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนสำหรับถ่ายทอดยุทธศาสตร์ชาติสู่กรอบและแนวทางในการพัฒนาประเทศในแต่ละช่วงระยะเวลา
+      5 ปี (แผนระดับที่ 2)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนความมั่นคงแห่งชาติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">นโยบายและแผนระดับชาติว่าด้วยความมั่นคงแห่งชาติ&quot;
+      ตามกฎหมายว่าด้วยความมั่นคงแห่งชาติซึ่งเป็นนโยบายและแผนหลักของชาติที่เป็นกรอบหรือทิศทางในการดำเนินการป้องกัน
+      แจ้งเตือน
+      แก้ไขหรือระงับยับยั้งภัยคุกคามเพื่อธำรงไว้ซึ่งความมั่นคงแห่งชาติ
+      ปี (แผนระดับที่ 2)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนแม่บทภายใต้</text:p><text:p text:style-name="Table_20_Contents">ยุทธศาสตร์ชาติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนแม่บทเพื่อบรรลุเป้าหมายตามที่กำหนดไว้ในยุทธศาสตร์ชาติ
+      (พระราชบัญญัติการจัดทำยุทธศาสตร์ชาติ พ.ศ. 2560 มาตรา 3 ปี
+      (แผนระดับที่ 2)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนปฏิรูปประเทศ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนและชั้นตอนการดำเนินการปฏิรูปประเทศ
+      ตามพระราชบัญญัติ แผนและขั้นตอนการดำเนินการปฏิรูปประเทศ พ.ศ. 2560
+      ปี (แผนระดับที่ 2)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนระดับที่ 3
+      (มติ</text:p><text:p text:style-name="Table_20_Contents">ครม. 4
+      ธ.ค. 2560)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แผนที่จัดทำขึ้นเพื่อสนับสนุนการดำเนินงานของแผนระดับที่
+      1 และแผนระดับที่ 2 ให้บรรลุเป้าหมายที่กำหนดไว้
+      หรือจัดทำขึ้นตามที่กฎหมายกำหนด
+      หรือจัดทำขึ้นตามพันธกรณีหรืออนุสัญญาระหว่างประเทศเช่น
+      แผนปฏิบัติราชการของส่วนราชการ แผนปฏิบัติการด้านต่าง ๆ
+      เพื่อถ่ายทอดเป้าหมายและตัวชี้วัดรวมถึงแนวทางการพัฒนาสู่การดำเนินงานของหน่วยงานอย่างเป็นระบบ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">นโยบายรัฐบาล/ข้อสั่งการนายกรัฐมนตรี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">มติคณะรัฐมนตรี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ผลการตัดสินใจร่วมกันของคณะรัฐมนตรีในการบริหารราชการแผ่นดินเรื่องต่าง
+      ๆ ตามที่กำหนดไว้ในรัฐธรรมนูญ กฎหมาย และนโยบายของคณะรัฐมนตรี เช่น
+      มติคณะรัฐมนตรีเกี่ยวกับการอนุมัติร่างกฎหมาย การอนุมัติงบประมาณ
+      การแต่งตั้งโยกย้ายข้าราชการ การกำหนดระเบียบและ
+      แบบแผนในการปฏิบัติราชการ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เพื่อการให้บริการประชาชน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตาม พรบ.
+      การอำนวยความสะดวกในการพิจารณาอนุญาติของทางราชการ
+      ที่กำหนดให้หน่วยงานของรัฐกำหนดกระบวนการขั้นตอนและเวลาในการพิจารณาอนุญาติให้มีความชัดเจน
+      ซึ่งจะเป็นการอำนวยความสะดวกแก่ประชาชน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">กฎหมายที่เกี่ยวข้อง</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">พันธกิจหน่วยงาน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ดัชนี/ตัวชี้วัดระดับนานาชาติ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลสำคัญที่แสดงสถานการณ์และแนวโน้มการพัฒนาของประเทศไทยโดยเปรียบเทียบกับประเทศอื่น
+      ๆ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่ทราบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วัตถุประสงค์อื่น ๆ
+      ซึ่งมิได้จัดประเภทไว้ในที่อื่น</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 9.1
+หน่วยความถี่ของการปรับปรุง (update_frequency_unit)</text:p>
+<table:table table:name="Table4" table:style-name="Table4">
+  <table:table-column table:style-name="Table4.A" />
+  <table:table-column table:style-name="Table4.B" />
+  <table:table-column table:style-name="Table4.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ปี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="13">
+      <text:p text:style-name="Table_20_Contents">-
+      กรณีที่ชุดข้อมูลมาจากหลายแหล่งและมีความถี่ของการปรับปรุงแตกต่างกันให้เลือกความถี่การปรับปรุงข้อมูลที่บ่อยที่สุด</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ครึ่งปี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไตรมาส</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เดือน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สัปดาห์</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วัน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">วันทำการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ชั่วโมง</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตามเวลาจริง</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่มีการปรับปรุงหลังจากการจัดเก็บข้อมูล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่ทราบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">นาที</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ
+      ระบุ...</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 10
+ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่ (ego_coverage)</text:p>
+<table:table table:name="Table5" table:style-name="Table5">
+  <table:table-column table:style-name="Table5.A" />
+  <table:table-column table:style-name="Table5.B" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่มี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">โลก</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ทวีป/กลุ่มประเทศในทวีป</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ทวีป ได้แก่ แอฟริกา
+      อเมริกา เอเชีย ยุโรป โอเชียเนีย
+      และกลุ่มประเทศภายใต้ทวีปดังกล่าว</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">กลุ่มประเทศทางเศรษฐกิจ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">กลุ่มตามระดับการพัฒนาทางเศรษฐกิจได้แก่
+      กลุ่มประเทศที่พัฒนาแล้ว
+      กลุ่มประเทศที่พัฒนาแล้วกำลังพัฒนา<text:line-break />กลุ่มประเทศที่มีระดับการพัฒนาน้อยที่สุด
+      กลุ่มประเทศที่ไม่มีอาณาเขตติดทะเล (Landlocked developing
+      countries) กลุ่มประเทศกำลังพัฒนาที่เป็นหมู่เกาะ (Small island
+      developing states) รวมถึงการจัดกลุ่มประเทศในมิติอื่น ๆ เช่น OECD,
+      ASEAN+3, OPEC ฯลฯ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ประเทศ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ภาค</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">จังหวัด</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อำเภอ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ตำบล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หมู่บ้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เทศบาล/อบต.</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">องค์การปกครองส่วนท้องถิ่น</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">พิกัต</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ค่าของตัวเลขที่ใช้อธิบายตำแหน่งของจุดบนระนาบหรือปริภูมิ
+      ตัวอย่างเช่น ระดับความสูงจากน้ำทะเล
+      ก็เป็นพิกัดอย่างหนึ่งที่อธิบายตำแหน่งของจุดเหนือระดับพื้นผิวโลก
+      โดยกำหนดพิกัดละติจูด และลองจูด เป็นทศนิยม 6 หลัก</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ
+      ระบุ...</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่ซึ่งมิได้จัดประเภทไว้ในที่อื่น
+      เช่น กลุ่มจังหวัด เขตปกครองพิเศษ
+      เขตพัฒนา<text:line-break />การท่องเที่ยว
+      เขตส่งเสริมพิเศษเขตสาธารณสุข เขตพื้นที่การศึกษา เป็นต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่ทราบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 12
+รูปแบบการเก็บข้อมูล</text:p>
+<table:table table:name="Table6" table:style-name="Table6">
+  <table:table-column table:style-name="Table6.A" />
+  <table:table-column table:style-name="Table6.B" />
+  <table:table-column table:style-name="Table6.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Database</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="16">
+      <text:p text:style-name="Table_20_Contents">-
+      มาตรฐานรูปแบบการจัดเก็บข้อมูลโดย Dublin Core (DCMI Metadata Terms)
+      ไม่ได้กำหนดตัวเลือกสำหรับรูปแบบการเก็บข้อมูล (Format) ที่ชัดเจน
+      คณะผู้จัดทำจึงกำหนดตัวเลือกเหลำนี้ขึ้นโดยอ้างอิงจากรูปแบบไฟล์ที่ใช้กันอย่างแพร่หลายในปัจจุบัน
+      และประยุกต์ใช้บางรายการจากประเภทของ MIME (Internet Media Types)
+      ที่ Dublin Core แนะนำเป็นแนวทาง</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">CSV</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">XML</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Image</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Video</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Audio</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Text</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">JSON</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">HTML</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">XLS</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">PDF</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">RDF</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NoSQL</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Vector</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เช่น Shapefile SVG
+      GML</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Raster</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เช่น GeoTiff
+      JPEG2000</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ ระบุ
+      .....</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 13
+หมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐ (data_catagory)</text:p>
+<table:table table:name="Table7" table:style-name="Table7">
+  <table:table-column table:style-name="Table7.A" />
+  <table:table-column table:style-name="Table7.B" />
+  <table:table-column table:style-name="Table7.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลสาธารณะ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลที่สามารถเปิดเผยได้
+      สามารถนำไปใช้ได้อย่างอิสระ ไม่ว่าจะเป็นข้อมูลข่าวสาร
+      ข้อมูลส่วนบุคคล ข้อมูลอิเล็กทรอนิกส์ เป็นต้น</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="4">
+      <text:p text:style-name="Table_20_Contents">อ้างอิงประกาศคณะกรรมการพัฒนารัฐบาลดิจิทัล
+      เรื่องธรรมาภิบาลข้อมูลภาครัฐกรณีที่ชุดข้อมูลประกอบด้วยข้อมูลมากกว่า
+      1
+      ประเภทให้เลือกหมวดหมู่ธรรมาภิบาลข้อมูลภาครัฐที่ต้องให้ความคุ้มครองสูงสุด</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลส่วนบุคคล</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อมแต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ
+      (พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562)</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลความมั่นคง</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลเกี่ยวกับความมั่นคงของรัฐ
+      ที่ทำให้เกิดความสงบเรียบร้อย การมีเสถียรภาพความเป็นปีกแผ่น
+      ปลอดภัยจากภัยคุกคาม เป็นต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลความลับทางราชการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลที่อยู่ในความครอบครองหรือควบคุมดูแลของหน่วยงานของรัฐที่มีคำสั่งไม่ให้มีการเปิดเผย
+      และมีการกำหนดชั้นความลับของข้อมูล</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 14
+สัญญาอนุญาตให้ใช้ข้อมูล (right_of_usage)</text:p>
+<table:table table:name="Table8" table:style-name="Table8">
+  <table:table-column table:style-name="Table8.A" />
+  <table:table-column table:style-name="Table8.B" />
+  <table:table-column table:style-name="Table8.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Creative Commons
+      Attributions</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อนุญาตให้ผู้อื่นสามารถนำผลงานไปใช้
+      ทำซ้ำ แจกจ่ายหรือดัดแปลงงานนั้นได้
+      แต่ต้องให้เครดิตที่มาของเจ้าของผลงาน
+      ซึ่งหากต้องการใช้ผลงานนั้นโดยไม่ให้เครดิตที่มาชื่อเจ้าของผลงานกำกับ
+      จะต้องทำการขออนุญาตเจ้าของผลงานก่อน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="7">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Creative Commons
+      Attribution ShareAlike</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อนุญาตให้ผู้อื่นสามารถนำผลงานไปใช้
+      ทำซ้ำ แจกจ่ายหรือดัดแปลงงานนั้นได้
+      แต่ผลงานที่ดัดแปลงนั้นจะต้องกำกับด้วยสัญญาอนุญาตเงื่อนไขเดียวกันกับต้นฉบับ
+      เว้นแต่ว่าจะได้รับอนุญาตจากเจ้าของผลงานก่อน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Creative Commons
+      Non-Commercial (Any)</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อนุญาตให้ผู้อื่นสามารถนำผลงานไปใช้
+      ทำซ้ำ แจกจ่ายหรือดัดแปลงงานนั้นได้ แต่ต้องไม่ใช่เพื่อการค้า
+      เว้นแต่ว่าจะได้รับอนุญาตจากเจ้าของผลงานก่อน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Open Data
+      Common</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อนุญาตให้ผู้อื่นสามารถนำผลงานไปใช้
+      ทำช้ำ แจกจ่ายหรือดัดแปลงงานนั้นได้ โดยไม่มีข้อจำกัด
+      ยกเว้นบางครั้งต้องให้เครดิตที่มาของเจ้าของผลงานและได้รับอนุญาตจากเจ้าของผลงานก่อน
+      หากมีการร้องขอ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">GNU Free Documentation
+      License</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">มีลักษณะเปิดกว้าง
+      หรือเรียกว่า copy left โดยให้ผู้อื่นสามารถนำข้อมูลส่วนใดส่วนหนึ่ง
+      หรือทั้งหมดไปใบได้ฟรีโดยมีเงื่อนไขว่า
+      ผลงานที่สร้างใหม่ต้องใช้สัญญา อนุญาตเอกสารเสรีของกนู เช่นกัน
+      ผลงานที่สร้างใหม่นั้นสามารถใช้ในเชิงพาณิชย์ได้
+      แต่ถ้ามีการขายเป็นจำนวนมากจะมีเงื่อนไขอื่นเพิ่มเติมเข้ามา
+      สัญญาอนุญาตเอกสารเสรีของกนู ครอบคุมสำหรับ คู่มือ คอมพิวเตอร์ ตำรา
+      และแหล่งอ้างอิงอึ้งทั้งในการเรียนการสอนและการทำงาน</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">License not
+      specified</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่สามารถระบุสัญญาอนุญาตได้</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Others
+      License</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สัญญาอนุญาตให้ใช้ข้อมูลอื่น
+      ๆ เช่น Attribution, Non-Commercial, Not open, Open และ Public
+      Domain เป็นต้น</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 20
+การจัดจำแนก</text:p>
+<table:table table:name="Table9" table:style-name="Table9">
+  <table:table-column table:style-name="Table9.A" />
+  <table:table-column table:style-name="Table9.B" />
+  <table:table-column table:style-name="Table9.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่มี</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="14">
+      <text:p text:style-name="Table_20_Contents">อ้างอิงจากการรวบรวมการจัดจำแนกที่ใช้มากในการจัดทำสถิติทางการ
+      สำนักงานสถิติแห่งชาติ</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">เพศ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อายุ/กลุ่มอายุ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สถานภาพสมรส</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ศาสนา</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ระดับการศึกษา</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อาชีพ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สถานภาพการทำงาน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อุตสาหกรรม/ประเภทกิจการ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">รายได้</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ผลิตภัณฑ์</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่ทราบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ ระบุ
+      .........</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลจัดจำแนกด้วยมิติอื่น
+      ๆ ซึ่งมิได้จัดประเภทไว้ในที่อื่น โดยสามารถระบุได้มากกว่า 1
+      การจัดจำแนกโดยใช้เครื่องหมาย &quot;,&quot; คั่นระหว่างการจัดจำแนก
+      เช่น ประเภทค่าใช้จ่าย, ประเภทสวัสดิการ</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+<text:p text:style-name="First_20_paragraph">รายการที่ 22
+หน่วยตัวคูณ</text:p>
+<table:table table:name="Table10" table:style-name="Table10">
+  <table:table-column table:style-name="Table10.A" />
+  <table:table-column table:style-name="Table10.B" />
+  <table:table-column table:style-name="Table10.C" />
+  <table:table-header-rows>
+    <table:table-row>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">รายการตัวเลือก</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">คำอธิบาย</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="TableHeaderRowCell" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">หมายเหตุ</text:p>
+      </table:table-cell>
+    </table:table-row>
+  </table:table-header-rows>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หน่วย</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Units หรือ
+      10<text:span text:style-name="T2">0</text:span></text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string" table:number-rows-spanned="15">
+      <text:p text:style-name="Table_20_Contents">อ้างอิงตาม Code list
+      for concept &quot;Unit Multiplier&quot; as written in SDMX cross
+      domain code list. Version 1.1</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สิบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Tens หรือ
+      10<text:span text:style-name="T2">1</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ร้อย</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Hundreds หรือ
+      10<text:span text:style-name="T2">2</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">พัน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Thousands หรือ
+      10<text:span text:style-name="T2">3</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หมื่น</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Tens of thousands หรือ
+      10<text:span text:style-name="T2">4</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แสน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Hundreds of thousands
+      หรือ 10<text:span text:style-name="T2">5</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Millions หรือ
+      10<text:span text:style-name="T2">6</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">สิบล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Tens of Millions หรือ
+      10<text:span text:style-name="T2">7</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ร้อยล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Hundreds of Millions
+      หรือ 10<text:span text:style-name="T2">8</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">พันล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Billions หรือ
+      10<text:span text:style-name="T2">9</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">หมื่นล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Tens of Billions หรือ
+      10<text:span text:style-name="T2">10</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">แสนล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Hundreds of Billions
+      หรือ 10<text:span text:style-name="T2">11</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ล้านล้าน</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Trillions หรือ
+      10<text:span text:style-name="T2">12</text:span></text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ไม่ทราบ</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">-</text:p>
+    </table:table-cell>
+  </table:table-row>
+  <table:table-row>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">อื่น ๆ ระบุ
+      .........</text:p>
+    </table:table-cell>
+    <table:table-cell table:style-name="TableRowCell" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ข้อมูลจัดจำแนกด้วยมิติอื่น
+      ๆ ซึ่งมิได้จัดประเภทไว้ในที่อื่น โดยสามารถระบุได้มากกว่า 1
+      การจัดจำแนกโดยใช้เครื่องหมาย &quot;,&quot; คั่นระหว่างการจัดจำแนก
+      เช่น ประเภทค่าใช้จ่าย, ประเภทสวัสดิการที่ได้รับ</text:p>
+    </table:table-cell>
+  </table:table-row>
+</table:table>
+</office:text>
+</office:body>
+</office:document-content>
