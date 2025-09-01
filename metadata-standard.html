@@ -27,9 +27,100 @@
         .search-glow:focus { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
         .header-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .card-gradient { background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 100%); backdrop-filter: blur(10px); }
+        
+        /* Modal positioning styles */
+        .modal-overlay {
+            position: fixed;
+            z-index: 50;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.centered {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .modal-overlay.positioned {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .modal-overlay.positioned .detail-modal {
+            pointer-events: all;
+            position: absolute;
+            max-width: min(90vw, 800px);
+            max-height: min(80vh, 600px);
+            overflow-y: auto;
+            transform-origin: top left;
+        }
+        
+        .modal-overlay.centered .detail-modal {
+            max-width: min(90vw, 1024px);
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Responsive modal adjustments */
+        @media (max-width: 768px) {
+            .modal-overlay.positioned .detail-modal {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+            
+            .modal-overlay.centered {
+                padding: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .modal-overlay .detail-modal {
+                max-width: 98vw;
+                max-height: 90vh;
+                margin: 0.25rem;
+            }
+        }
+        
+        /* Special styling for embedded context */
+        .embedded-context .modal-overlay.positioned .detail-modal {
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(99, 102, 241, 0.1);
+        }
+        
+        /* Animation for modal appearance */
+        .detail-modal {
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        /* Smooth transitions for repositioning */
+        .modal-overlay.positioned .detail-modal {
+            transition: all 0.2s ease-out;
+        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen">
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen" :class="{ 'embedded-context': isEmbedded }">
     <div id="app">
         <!-- Header -->
         <header class="header-gradient text-white shadow-2xl">
@@ -100,11 +191,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr 
+                             <tr 
                                 v-for="(item, index) in filteredMetadata" 
                                 :key="index"
+                                :ref="el => setRowRef(el, index)"
                                 class="table-row-hover border-b border-gray-100 transition-all duration-300"
-                                @click="selectItem(item)"
+                                @click="selectItem(item, $event)"
                             >
                                 <td class="px-6 py-4 font-medium text-indigo-600">{{ item.id }}</td>
                                 <td class="px-6 py-4 font-medium">{{ item.nameThai }}</td>
@@ -120,8 +212,15 @@
         </section>
 
         <!-- Detail Modal -->
-        <div v-if="selectedItem" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4" @click="closeModal">
-            <div class="detail-modal bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" @click.stop>
+        <div v-if="selectedItem" 
+             class="modal-overlay" 
+             :class="modalOverlayClasses"
+             :style="modalOverlayStyles"
+             @click="closeModal">
+            <div class="detail-modal bg-white rounded-2xl shadow-2xl" 
+                 :class="modalClasses"
+                 :style="modalStyles"
+                 @click.stop>
                 <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-2xl">
                     <div class="flex justify-between items-center">
                         <h3 class="text-2xl font-bold">{{ selectedItem.nameThai }}</h3>
@@ -156,13 +255,18 @@
     </div>
 
     <script type="module">
-        const { createApp, ref, computed, onMounted } = Vue;
+        const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
 
         createApp({
             setup() {
                 const searchQuery = ref('');
                 const selectedCategory = ref('');
                 const selectedItem = ref(null);
+                const clickedRowPosition = ref(null);
+                const rowRefs = ref([]);
+                
+                // Detect if embedded in iframe for Google Sites
+                const isEmbedded = ref(window.self !== window.top);
                 
                 // Metadata items extracted from XML
                 const metadataItems = ref([
@@ -338,12 +442,122 @@
                     { label: 'ข้อมูลเทคนิค', value: metadataItems.value.filter(item => item.category === 'ข้อมูลเทคนิค').length }
                 ]);
 
-                const selectItem = (item) => {
+                const selectItem = (item, event) => {
                     selectedItem.value = item;
+                    
+                    // Calculate position relative to clicked row
+                    if (event && event.currentTarget) {
+                        const rect = event.currentTarget.getBoundingClientRect();
+                        const viewportHeight = window.innerHeight;
+                        const viewportWidth = window.innerWidth;
+                        
+                        // Store the position for modal placement
+                        clickedRowPosition.value = {
+                            top: rect.top,
+                            left: rect.left,
+                            right: rect.right,
+                            bottom: rect.bottom,
+                            rowHeight: rect.height,
+                            rowWidth: rect.width,
+                            viewportHeight,
+                            viewportWidth
+                        };
+                    } else {
+                        clickedRowPosition.value = null;
+                    }
                 };
+
+                const setRowRef = (el, index) => {
+                    if (el) {
+                        rowRefs.value[index] = el;
+                    }
+                };
+
+                // Computed properties for modal positioning
+                const modalOverlayClasses = computed(() => {
+                    return isEmbedded.value && clickedRowPosition.value ? 'positioned' : 'centered';
+                });
+
+                const modalOverlayStyles = computed(() => {
+                    if (!isEmbedded.value || !clickedRowPosition.value) {
+                        return {};
+                    }
+                    return {};
+                });
+
+                const modalClasses = computed(() => {
+                    return '';
+                });
+
+                const modalStyles = computed(() => {
+                    if (!isEmbedded.value || !clickedRowPosition.value) {
+                        return {};
+                    }
+
+                    const pos = clickedRowPosition.value;
+                    const isMobile = pos.viewportWidth < 768;
+                    const isSmallMobile = pos.viewportWidth < 480;
+                    
+                    // Responsive modal dimensions
+                    let modalWidth, modalHeight;
+                    
+                    if (isSmallMobile) {
+                        modalWidth = Math.min(pos.viewportWidth * 0.98, pos.viewportWidth - 10);
+                        modalHeight = Math.min(pos.viewportHeight * 0.9, pos.viewportHeight - 20);
+                    } else if (isMobile) {
+                        modalWidth = Math.min(pos.viewportWidth * 0.95, pos.viewportWidth - 20);
+                        modalHeight = Math.min(pos.viewportHeight * 0.85, pos.viewportHeight - 40);
+                    } else {
+                        modalWidth = Math.min(pos.viewportWidth * 0.9, 800);
+                        modalHeight = Math.min(pos.viewportHeight * 0.8, 600);
+                    }
+                    
+                    // Calculate optimal position
+                    let left, top;
+                    
+                    if (isMobile) {
+                        // On mobile, center the modal
+                        left = (pos.viewportWidth - modalWidth) / 2;
+                        top = (pos.viewportHeight - modalHeight) / 2;
+                    } else {
+                        // Desktop positioning relative to clicked row
+                        left = pos.right + 15; // Start to the right of the row with margin
+                        top = Math.max(10, pos.top - 10); // Align with row top, with small offset
+                        
+                        // Adjust if modal would go off-screen horizontally
+                        if (left + modalWidth > pos.viewportWidth - 10) {
+                            left = Math.max(10, pos.left - modalWidth - 15); // Move to left side
+                        }
+                        
+                        // Ensure modal stays within viewport horizontally
+                        if (left < 10) {
+                            left = Math.max(10, (pos.viewportWidth - modalWidth) / 2); // Center if needed
+                        }
+                        
+                        // Adjust vertical position to keep modal in viewport
+                        if (top + modalHeight > pos.viewportHeight - 10) {
+                            top = Math.max(10, pos.viewportHeight - modalHeight - 10);
+                        }
+                        
+                        // Special case: if row is at the bottom, position modal above it
+                        if (pos.bottom > pos.viewportHeight * 0.7 && top + modalHeight > pos.viewportHeight - 20) {
+                            top = Math.max(10, pos.top - modalHeight - 15);
+                        }
+                    }
+
+                    return {
+                        left: `${Math.max(0, left)}px`,
+                        top: `${Math.max(0, top)}px`,
+                        width: `${modalWidth}px`,
+                        height: `${modalHeight}px`,
+                        maxWidth: 'none',
+                        maxHeight: 'none'
+                    };
+                });
 
                 const closeModal = () => {
                     selectedItem.value = null;
+                    clickedRowPosition.value = null;
                 };
 
                 const clearFilters = () => {
@@ -364,19 +578,51 @@
                         { scale: 0.8, opacity: 0 }, 
                         { scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, delay: 0.5, ease: "back.out(1.7)" }
                     );
+                    
+                    // Handle window resize to reposition modal if open
+                    const handleResize = () => {
+                        if (selectedItem.value && clickedRowPosition.value) {
+                            // Update viewport dimensions
+                            clickedRowPosition.value.viewportHeight = window.innerHeight;
+                            clickedRowPosition.value.viewportWidth = window.innerWidth;
+                        }
+                    };
+                    
+                    // Handle ESC key to close modal
+                    const handleKeydown = (event) => {
+                        if (event.key === 'Escape' && selectedItem.value) {
+                            closeModal();
+                        }
+                    };
+                    
+                    window.addEventListener('resize', handleResize);
+                    document.addEventListener('keydown', handleKeydown);
+                    
+                    // Cleanup
+                    onUnmounted(() => {
+                        window.removeEventListener('resize', handleResize);
+                        document.removeEventListener('keydown', handleKeydown);
+                    });
                 });
 
                 return {
                     searchQuery,
                     selectedCategory,
                     selectedItem,
+                    clickedRowPosition,
+                    isEmbedded,
                     metadataItems,
                     categories,
                     filteredMetadata,
                     statistics,
                     selectItem,
+                    setRowRef,
                     closeModal,
-                    clearFilters
+                    clearFilters,
+                    modalOverlayClasses,
+                    modalOverlayStyles,
+                    modalClasses,
+                    modalStyles
                 };
             }
         }).mount('#app');
