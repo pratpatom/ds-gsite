@@ -10,7 +10,43 @@ def get_text_from_element(element):
         return ""
     return "".join(element.itertext()).strip()
 
-def parse_table(table_element, namespaces):
+def get_cell_content(cell_element, namespaces, list_styles=None):
+    """Extract content from table cell, handling auto-increment lists"""
+    if cell_element is None:
+        return ""
+    
+    # Check if this cell contains a list element (auto-increment)
+    list_element = cell_element.find('.//text:list', namespaces)
+    if list_element is not None and list_styles is not None:
+        # Extract the list style name
+        style_name = list_element.get(f"{{{namespaces['text']}}}style-name")
+        if style_name and style_name in list_styles:
+            return str(list_styles[style_name])
+    
+    # Fallback to regular text extraction
+    return get_text_from_element(cell_element)
+
+def extract_list_styles(root, namespaces):
+    """Extract list style definitions and their start values"""
+    list_styles = {}
+    
+    # Find all list style definitions
+    for list_style in root.findall('.//text:list-style', namespaces):
+        style_name = list_style.get(f"{{{namespaces['style']}}}name")
+        if style_name:
+            # Find the text:start-value attribute
+            level_style = list_style.find('.//text:list-level-style-number', namespaces)
+            if level_style is not None:
+                start_value = level_style.get(f"{{{namespaces['text']}}}start-value")
+                if start_value:
+                    try:
+                        list_styles[style_name] = int(start_value)
+                    except ValueError:
+                        pass
+    
+    return list_styles
+
+def parse_table(table_element, namespaces, list_styles=None):
     rows = []
     header_rows = table_element.findall('table:table-header-rows/table:table-row', namespaces)
     body_rows = table_element.findall('table:table-row', namespaces)
@@ -18,7 +54,7 @@ def parse_table(table_element, namespaces):
     for row_element in header_rows + body_rows:
         row_data = []
         for cell_element in row_element.findall('table:table-cell', namespaces):
-            row_data.append(get_text_from_element(cell_element))
+            row_data.append(get_cell_content(cell_element, namespaces, list_styles))
         rows.append(row_data)
     return rows
 
@@ -53,10 +89,14 @@ def main():
         'office': 'urn:oasis:names:tc:opendocument:xmlns:office:1.0',
         'table': 'urn:oasis:names:tc:opendocument:xmlns:table:1.0',
         'text': 'urn:oasis:names:tc:opendocument:xmlns:text:1.0',
+        'style': 'urn:oasis:names:tc:opendocument:xmlns:style:1.0',
     }
 
     tree = ET.parse(xml_file)
     root = tree.getroot()
+
+    # Extract list style definitions for auto-increment handling
+    list_styles = extract_list_styles(root, namespaces)
 
     office_text = root.find('office:body/office:text', namespaces)
     if office_text is None:
@@ -79,7 +119,7 @@ def main():
 
     parsed_tables = {}
     for name, table_info in tables.items():
-        parsed_tables[name] = parse_table(table_info['element'], namespaces)
+        parsed_tables[name] = parse_table(table_info['element'], namespaces, list_styles)
 
     lookups = {}
     for table_name, table_info in tables.items():
