@@ -160,7 +160,7 @@
                 // Transform example data to match standard format
                 const loadExampleData = async () => {
                     try {
-                        const response = await fetch('./data/data_dictionary_example.json');
+                        const response = await fetch('https://raw.githubusercontent.com/pratpatom/ds-gsite/refs/heads/dev/data/data_dictionary_example.json');
                         const rawData = await response.json();
                         
                         // Transform data to match standard format
