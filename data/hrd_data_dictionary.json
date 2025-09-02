@@ -1,0 +1,93 @@
+[
+  {
+    "Name": "uuid",
+    "Data Type": "VARCHAR(36)",
+    "คำอธิบาย": "รหัสประจำตัวนักวิจัยแบบ UUID ที่สร้างจากเลขประจำตัวประชาชนและชื่อ-สกุล",
+    "Required": "YES",
+    "Example": "f747af7b-2944-de9a-3527-c9e3dc892121"
+  },
+  {
+    "Name": "position",
+    "Data Type": "VARCHAR(255)",
+    "คำอธิบาย": "ตำแหน่งงานของนักวิจัย",
+    "Required": "NO",
+    "Example": "นักวิชาการสาธารณสุข, พยาบาลวิชาชีพ, นักเทคนิคการแพทย์, นายแพทย์"
+  },
+  {
+    "Name": "deptName",
+    "Data Type": "VARCHAR(255)",
+    "คำอธิบาย": "ชื่อหน่วยงาน/แผนกที่สังกัด",
+    "Required": "YES",
+    "Example": "กองโรคเอดส์และโรคติดต่อทางเพศสัมพันธ์"
+  },
+  {
+    "Name": "pro_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนโครงการวิจัยที่เป็นผู้วิจัยหลัก",
+    "Required": "NO",
+    "Example": "2.0"
+  },
+  {
+    "Name": "pi_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนครั้งที่เป็น Principal Investigator (PI)",
+    "Required": "NO",
+    "Example": "1.0"
+  },
+  {
+    "Name": "journal_frist_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนบทความวิจัยที่เป็นผู้เขียนคนแรก (First Author)",
+    "Required": "NO",
+    "Example": "1.0"
+  },
+  {
+    "Name": "journal_tci1_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนบทความวิจัยใน TCI กลุ่ม 1",
+    "Required": "NO",
+    "Example": "1.0"
+  },
+  {
+    "Name": "journal_Q1-3_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนบทความวิจัยในวารสาร Q1-Q3 (ISI/Scopus)",
+    "Required": "NO",
+    "Example": "1.0"
+  },
+  {
+    "Name": "journal_co_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนบทความวิจัยที่เป็นผู้เขียนร่วม (Co-Author)",
+    "Required": "NO",
+    "Example": "1.0"
+  },
+  {
+    "Name": "util_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "จำนวนผลงานที่มีการนำไปใช้ประโยชน์",
+    "Required": "NO",
+    "Example": "3.0"
+  },
+  {
+    "Name": "h-index_count",
+    "Data Type": "DECIMAL(10,2)",
+    "คำอธิบาย": "ค่า H-Index ของนักวิจัย",
+    "Required": "NO",
+    "Example": "11.0"
+  },
+  {
+    "Name": "researcher_level",
+    "Data Type": "VARCHAR(50)",
+    "คำอธิบาย": "ระดับความสามารถของนักวิจัย",
+    "Required": "NO",
+    "Example": "ระดับฝึกหัด, ระดับต้น, ระดับกลาง, ระดับสูง"
+  },
+  {
+    "Name": "updated_at",
+    "Data Type": "VARCHAR(50)",
+    "คำอธิบาย": "วันที่ปรับปรุงข้อมูลล่าสุด",
+    "Required": "NO",
+    "Example": "28 ม.ค. 2568"
+  }
+]
