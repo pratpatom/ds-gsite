@@ -28,7 +28,28 @@
         .header-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .card-gradient { background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 100%); backdrop-filter: blur(10px); }
         
-        /* Modal positioning styles */
+        /* Text utilities for better mobile readability */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Enhanced card hover effects */
+        .card-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Modal positioning styles - Enhanced for mobile */
         .modal-overlay {
             position: fixed;
             z-index: 50;
@@ -66,17 +87,28 @@
         }
         
         .modal-overlay.centered .detail-modal {
-            max-width: min(90vw, 1024px);
+            max-width: min(95vw, 1024px);
             width: 100%;
-            max-height: 90vh;
+            max-height: 95vh;
             overflow-y: auto;
         }
         
-        /* Responsive modal adjustments */
-        @media (max-width: 768px) {
+        /* Enhanced responsive modal adjustments */
+        @media (max-width: 1024px) {
             .modal-overlay.positioned .detail-modal {
                 max-width: 95vw;
-                max-height: 85vh;
+                max-height: 90vh;
+            }
+            
+            .modal-overlay.centered {
+                padding: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .modal-overlay.positioned .detail-modal {
+                max-width: 98vw;
+                max-height: 92vh;
             }
             
             .modal-overlay.centered {
@@ -86,9 +118,14 @@
         
         @media (max-width: 480px) {
             .modal-overlay .detail-modal {
-                max-width: 98vw;
-                max-height: 90vh;
-                margin: 0.25rem;
+                max-width: 100vw;
+                max-height: 100vh;
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .modal-overlay.centered {
+                padding: 0;
             }
         }
         
@@ -124,13 +161,15 @@
     <div id="app">
         <!-- Header -->
         <header class="header-gradient text-white shadow-2xl">
-            <div class="container mx-auto px-6 py-8">
+            <div class="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
                 <div class="text-center">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">มาตรฐานข้อมูลเมตาดาต้า</h1>
-                    <p class="text-xl md:text-2xl opacity-90 fade-in">Thailand Government Data Standards & Specifications</p>
-                    <div class="mt-6 flex justify-center fade-in">
-                        <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 text-sm font-medium">
-                            {{ metadataItems.length }} รายการมาตรฐาน
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-4 fade-in leading-tight">มาตรฐานข้อมูลเมตาดาต้า</h1>
+                    <p class="text-lg sm:text-xl lg:text-2xl opacity-90 fade-in px-4">Thailand Government Data Standards & Specifications</p>
+                    <div class="mt-4 sm:mt-6 flex justify-center fade-in">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 text-sm font-medium">
+                            <span v-if="isLoading">กำลังโหลดข้อมูล...</span>
+                            <span v-else-if="loadError" class="text-red-200">{{ loadError }} (ใช้ข้อมูลสำรอง)</span>
+                            <span v-else>{{ metadataItems.length }} รายการมาตรฐาน</span>
                         </div>
                     </div>
                 </div>
@@ -138,26 +177,26 @@
         </header>
 
         <!-- Search & Filter Section -->
-        <section class="container mx-auto px-6 py-8">
-            <div class="card-gradient rounded-2xl p-6 shadow-xl fade-in">
-                <div class="flex flex-col md:flex-row gap-4 items-center">
-                    <div class="flex-1 relative">
+        <section class="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div class="card-gradient rounded-2xl p-4 sm:p-6 shadow-xl fade-in">
+                <div class="flex flex-col gap-4">
+                    <div class="relative">
                         <input 
                             v-model="searchQuery"
                             type="text" 
                             placeholder="ค้นหามาตรฐานข้อมูล..."
-                            class="w-full px-6 py-4 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 search-glow transition-all duration-300 text-lg"
+                            class="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 search-glow transition-all duration-300 text-base sm:text-lg"
                         >
-                        <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    <div class="flex gap-3">
-                        <select v-model="selectedCategory" class="px-4 py-3 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 transition-colors">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <select v-model="selectedCategory" class="flex-1 px-4 py-3 rounded-xl border-2 border-indigo-200 focus:border-indigo-500 transition-colors text-base">
                             <option value="">ทุกหมวดหมู่</option>
                             <option v-for="category in categories" :key="category" :value="category">{{ category }}</option>
                         </select>
-                        <button @click="clearFilters" class="px-6 py-3 bg-purple-500 text-white rounded-xl hover:bg-purple-600 transition-colors font-medium">
+                        <button @click="clearFilters" class="px-4 sm:px-6 py-3 bg-purple-500 text-white rounded-xl hover:bg-purple-600 transition-colors font-medium text-base whitespace-nowrap">
                             ล้างตัวกรอง
                         </button>
                     </div>
@@ -166,28 +205,29 @@
         </section>
 
         <!-- Statistics Cards -->
-        <section class="container mx-auto px-6 mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div v-for="(stat, index) in statistics" :key="index" class="stat-card card-gradient rounded-xl p-6 text-center shadow-lg fade-in">
-                    <div class="text-3xl font-bold text-indigo-600 mb-2">{{ stat.value }}</div>
-                    <div class="text-gray-700 font-medium">{{ stat.label }}</div>
+        <section class="container mx-auto px-4 sm:px-6 mb-6 sm:mb-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                <div v-for="(stat, index) in statistics" :key="index" class="stat-card card-gradient rounded-xl p-4 sm:p-6 text-center shadow-lg fade-in">
+                    <div class="text-xl sm:text-3xl font-bold text-indigo-600 mb-1 sm:mb-2">{{ stat.value }}</div>
+                    <div class="text-xs sm:text-base text-gray-700 font-medium">{{ stat.label }}</div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Data Table -->
-        <section class="container mx-auto px-6 pb-12">
-            <div class="card-gradient rounded-2xl shadow-2xl overflow-hidden fade-in">
+        <!-- Main Data Display -->
+        <section class="container mx-auto px-4 sm:px-6 pb-12">
+            <!-- Desktop Table View -->
+            <div class="hidden lg:block card-gradient rounded-2xl shadow-2xl overflow-hidden fade-in">
                 <div class="overflow-x-auto">
-                    <table class="w-full">
+                    <table class="w-full table-fixed">
                         <thead class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
                             <tr>
-                                <th class="px-6 py-4 text-left font-semibold">ลำดับ</th>
-                                <th class="px-6 py-4 text-left font-semibold">ชื่อรายการไทย</th>
-                                <th class="px-6 py-4 text-left font-semibold">ชื่อทางเทคนิค</th>
-                                <th class="px-6 py-4 text-left font-semibold">คำอธิบาย</th>
-                                <th class="px-6 py-4 text-left font-semibold">ตัวเลือก/รูปแบบ</th>
-                                <th class="px-6 py-4 text-left font-semibold">ตัวอย่าง</th>
+                                <th class="w-16 px-6 py-4 text-left font-semibold">ลำดับ</th>
+                                <th class="w-1/4 px-6 py-4 text-left font-semibold">ชื่อรายการไทย</th>
+                                <th class="w-1/5 px-6 py-4 text-left font-semibold">ชื่อทางเทคนิค</th>
+                                <th class="w-1/4 px-6 py-4 text-left font-semibold">คำอธิบาย</th>
+                                <th class="w-1/6 px-6 py-4 text-left font-semibold">ตัวเลือก/รูปแบบ</th>
+                                <th class="w-1/6 px-6 py-4 text-left font-semibold">ตัวอย่าง</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -195,18 +235,61 @@
                                 v-for="(item, index) in filteredMetadata" 
                                 :key="index"
                                 :ref="el => setRowRef(el, index)"
-                                class="table-row-hover border-b border-gray-100 transition-all duration-300"
+                                class="table-row-hover border-b border-gray-100 transition-all duration-300 cursor-pointer"
                                 @click="selectItem(item, $event)"
                             >
                                 <td class="px-6 py-4 font-medium text-indigo-600">{{ item.id }}</td>
-                                <td class="px-6 py-4 font-medium">{{ item.nameThai }}</td>
-                                <td class="px-6 py-4 text-sm font-mono bg-gray-50 rounded-md mx-2 px-2 py-1">{{ item.technicalName }}</td>
-                                <td class="px-6 py-4 text-sm text-gray-700 max-w-xs">{{ item.description }}</td>
-                                <td class="px-6 py-4 text-sm">{{ item.format }}</td>
-                                <td class="px-6 py-4 text-sm font-medium text-green-600">{{ item.example }}</td>
+                                <td class="px-6 py-4 font-medium break-words">{{ item.nameThai }}</td>
+                                <td class="px-6 py-4 text-sm font-mono bg-gray-50 rounded-md mx-2 px-2 py-1 break-all">{{ item.technicalName }}</td>
+                                <td class="px-6 py-4 text-sm text-gray-700 break-words">{{ item.description }}</td>
+                                <td class="px-6 py-4 text-sm break-words">{{ item.format }}</td>
+                                <td class="px-6 py-4 text-sm font-medium text-green-600 break-words">{{ item.example }}</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Mobile Card View -->
+            <div class="lg:hidden space-y-4 fade-in">
+                <div 
+                    v-for="(item, index) in filteredMetadata" 
+                    :key="index"
+                    class="card-gradient rounded-xl shadow-lg p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                    @click="selectItem(item, $event)"
+                >
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">{{ item.id }}</span>
+                            <span class="inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium">
+                                {{ item.category }}
+                            </span>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 leading-tight">{{ item.nameThai }}</h3>
+                    
+                    <div class="mb-3">
+                        <p class="text-sm font-mono bg-gray-100 text-gray-700 px-3 py-1 rounded-md inline-block">
+                            {{ item.technicalName }}
+                        </p>
+                    </div>
+                    
+                    <p class="text-gray-600 text-sm mb-3 line-clamp-3 leading-relaxed">{{ item.description }}</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div>
+                            <span class="text-gray-500 font-medium">รูปแบบ:</span>
+                            <p class="text-gray-700 mt-1 line-clamp-2">{{ item.format }}</p>
+                        </div>
+                        <div v-if="item.example">
+                            <span class="text-gray-500 font-medium">ตัวอย่าง:</span>
+                            <p class="text-green-600 font-medium mt-1">{{ item.example }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -221,29 +304,31 @@
                  :class="modalClasses"
                  :style="modalStyles"
                  @click.stop>
-                <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-2xl">
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-2xl font-bold">{{ selectedItem.nameThai }}</h3>
-                        <button @click="closeModal" class="text-white hover:text-gray-200 text-2xl">&times;</button>
+                <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 sm:p-6 rounded-t-2xl">
+                    <div class="flex justify-between items-start gap-4">
+                        <div class="min-w-0 flex-1">
+                            <h3 class="text-xl sm:text-2xl font-bold leading-tight">{{ selectedItem.nameThai }}</h3>
+                            <p class="text-indigo-100 mt-1 sm:mt-2 font-mono text-sm sm:text-base break-all">{{ selectedItem.technicalName }}</p>
+                        </div>
+                        <button @click="closeModal" class="text-white hover:text-gray-200 text-2xl sm:text-3xl leading-none flex-shrink-0">&times;</button>
                     </div>
-                    <p class="text-indigo-100 mt-2 font-mono">{{ selectedItem.technicalName }}</p>
                 </div>
-                <div class="p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 sm:p-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">คำอธิบาย</h4>
-                            <p class="text-gray-600 bg-gray-50 p-4 rounded-lg">{{ selectedItem.description }}</p>
+                            <h4 class="font-semibold text-gray-800 mb-2 text-base sm:text-lg">คำอธิบาย</h4>
+                            <p class="text-gray-600 bg-gray-50 p-3 sm:p-4 rounded-lg text-sm sm:text-base leading-relaxed">{{ selectedItem.description }}</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">รูปแบบ</h4>
-                            <p class="text-gray-600 bg-gray-50 p-4 rounded-lg">{{ selectedItem.format }}</p>
+                            <h4 class="font-semibold text-gray-800 mb-2 text-base sm:text-lg">รูปแบบ</h4>
+                            <p class="text-gray-600 bg-gray-50 p-3 sm:p-4 rounded-lg text-sm sm:text-base leading-relaxed">{{ selectedItem.format }}</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">ตัวอย่าง</h4>
-                            <p class="text-green-600 bg-green-50 p-4 rounded-lg font-medium">{{ selectedItem.example || 'ไม่มีตัวอย่าง' }}</p>
+                            <h4 class="font-semibold text-gray-800 mb-2 text-base sm:text-lg">ตัวอย่าง</h4>
+                            <p class="text-green-600 bg-green-50 p-3 sm:p-4 rounded-lg font-medium text-sm sm:text-base break-all">{{ selectedItem.example || 'ไม่มีตัวอย่าง' }}</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">หมวดหมู่</h4>
+                            <h4 class="font-semibold text-gray-800 mb-2 text-base sm:text-lg">หมวดหมู่</h4>
                             <span class="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
                                 {{ selectedItem.category }}
                             </span>
@@ -251,22 +336,22 @@
                     </div>
                     
                     <!-- Enhanced Options Section -->
-                    <div v-if="selectedItem.options && selectedItem.options.length > 0" class="mt-8">
-                        <h4 class="font-semibold text-gray-800 mb-4 text-lg flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div v-if="selectedItem.options && selectedItem.options.length > 0" class="mt-6 sm:mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg flex items-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
                             </svg>
                             ตัวเลือกที่มี ({{ selectedItem.options.length }} รายการ)
                         </h4>
                         
-                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-200">
-                            <div class="grid gap-4">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6 border border-indigo-200">
+                            <div class="grid gap-3 sm:gap-4">
                                 <div v-for="(option, index) in selectedItem.options" :key="index" 
                                      class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200">
-                                    <div class="p-4">
-                                        <div class="flex items-start justify-between mb-2">
-                                            <h5 class="font-semibold text-indigo-700 text-lg">{{ option.รายการตัวเลือก }}</h5>
-                                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded-full font-medium">
+                                    <div class="p-3 sm:p-4">
+                                        <div class="flex items-start justify-between mb-2 gap-3">
+                                            <h5 class="font-semibold text-indigo-700 text-base sm:text-lg leading-tight flex-1 min-w-0">{{ option.รายการตัวเลือก }}</h5>
+                                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded-full font-medium flex-shrink-0">
                                                 {{ index + 1 }}
                                             </span>
                                         </div>
@@ -290,19 +375,19 @@
                     </div>
                     
                     <!-- Show message when no options available -->
-                    <div v-else-if="selectedItem.format && selectedItem.format.includes('ตัวเลือก')" class="mt-8">
-                        <h4 class="font-semibold text-gray-800 mb-4 text-lg flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div v-else-if="selectedItem.format && selectedItem.format.includes('ตัวเลือก')" class="mt-6 sm:mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-3 sm:mb-4 text-base sm:text-lg flex items-center">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             ตัวเลือกที่มี
                         </h4>
-                        <div class="bg-gray-50 rounded-lg p-6 text-center">
-                            <svg class="w-12 h-12 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="bg-gray-50 rounded-lg p-4 sm:p-6 text-center">
+                            <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-gray-400 mb-3 sm:mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
-                            <p class="text-gray-600">รายการนี้มีตัวเลือก แต่ยังไม่มีข้อมูลรายละเอียด</p>
-                            <p class="text-sm text-gray-500 mt-2">โปรดดูเอกสารอ้างอิงเพิ่มเติม</p>
+                            <p class="text-gray-600 text-sm sm:text-base">รายการนี้มีตัวเลือก แต่ยังไม่มีข้อมูลรายละเอียด</p>
+                            <p class="text-xs sm:text-sm text-gray-500 mt-2">โปรดดูเอกสารอ้างอิงเพิ่มเติม</p>
                         </div>
                     </div>
                 </div>
@@ -323,292 +408,56 @@
                 // Detect if embedded in iframe for Google Sites
                 const isEmbedded = ref(window.self !== window.top);
                 
-                // Embedded JSON data for portability
-                const jsonData = ref({
+                // Reactive data state
+                const jsonData = ref({});
+                const isLoading = ref(true);
+                const loadError = ref(null);
+                
+                // GitHub raw URL for metadata standard JSON
+                const METADATA_URL = 'https://raw.githubusercontent.com/pratpatom/ds-gsite/refs/heads/dev/data/new_metadata_std.json';
+                
+                // Fallback data for portability (kept as backup)
+                const fallbackData = {
                     "dataset_id": {
                         "ลำดับ": "0",
                         "ชื่อรายการไทย": "รหัสชุดข้อมูล",
                         "คำอธิบาย": "รหัสประจำชุดข้อมูล",
                         "ตัวเลือก/รูปแบบ": "dir_อักษรย่อกลุ่ม_ตัวเลข 2 หลัก",
-                        "ตัวอย่าง": "dir_ita_01",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "DCI",
-                                "คำอธิบาย": "อักษรย่อกลุ่มนวัตกรรมด้านการป้องกันควบคุมโรค"
-                            },
-                            {
-                                "รายการตัวเลือก": "EC",
-                                "คำอธิบาย": ""
-                            },
-                            {
-                                "รายการตัวเลือก": "HRD",
-                                "คำอธิบาย": "อักษรย่อกลุ่มพัฒนาศักยภาพนักวิจัยและบริการวิชาการ"
-                            },
-                            {
-                                "รายการตัวเลือก": "HTA-DCJ",
-                                "คำอธิบาย": "อักษรย่อกลุ่มวิจัยประเมินเทคโนโลยีและวารสารควบคุมโรค"
-                            },
-                            {
-                                "รายการตัวเลือก": "ITA",
-                                "คำอธิบาย": "อักษรย่อกลุ่มเทคโนโลยีสารสนเทศและปัญญาประดิษฐ์"
-                            },
-                            {
-                                "รายการตัวเลือก": "KMS",
-                                "คำอธิบาย": "อักษรย่อกลุ่มจัดการความรู้และมาตรฐานวิชาการ"
-                            },
-                            {
-                                "รายการตัวเลือก": "MANA",
-                                "คำอธิบาย": "อักษรย่อกลุ่มบริหารทั่วไป"
-                            },
-                            {
-                                "รายการตัวเลือก": "OD",
-                                "คำอธิบาย": "อักษรย่อกลุ่มพัฒนาองค์กร"
-                            },
-                            {
-                                "รายการตัวเลือก": "STRM",
-                                "คำอธิบาย": "อักษรย่อกลุ่มยุทธศาสตร์และบริหารวิจัย"
-                            }
-                        ]
+                        "ตัวอย่าง": "dir_ita_01"
                     },
                     "data_type": {
-                        "ลำดับ": "",
+                        "ลำดับ": "1",
                         "ชื่อรายการไทย": "ประเภทข้อมูล",
                         "คำอธิบาย": "ชุดข้อมูลนี้เป็นข้อมูลประเภทใด",
                         "ตัวเลือก/รูปแบบ": "ตัวเลือกดูรายละเอียด \"รายการที่ 1 ประเภทข้อมูล\"",
-                        "ตัวอย่าง": "ข้อมูลสถิติ",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "ข้อมูลระเบียน",
-                                "คำอธิบาย": "ข้อมูลระเบียน (Record) ที่จากระบบฐานข้อมูลทะเบียนหรือจากการบริหารงานของหน่วยงาน และที่ได้จากการสำมะโน/สำรวจด้วยตัวอย่างรวมทั้ง Transaction Data ตัวอย่างเช่น รายการจดทะเบียนธุรกิจ และ รายการจดทะเบียนสรรพสามิต เป็นต้น"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลสถิติ",
-                                "คำอธิบาย": "ข้อความหรือตัวเลขที่แสดงผลที่ประมวลจากข้อมูลที่เก็บรวบรวมได้"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลภูมิสารสนเทศเชิงพื้นที่",
-                                "คำอธิบาย": "ข้อมูลหรือสารสนเทศที่มีความสัมพันธ์กับตำแหน่งในพื้นที่ เช่น แผนที่ภาพถ่ายทางอากาศ และภาพถ่ายทาง"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลหลากหลายประเภท",
-                                "คำอธิบาย": "ชุดข้อมูลที่รวบรวมมาจากข้อมูลหลากหลายประเภทมาจัดเป็นชุดข้อมูลตามความต้องการใช้งาน เช่น ชุดข้อมูลที่ประกอบด้วยข้อมูลระเบียน ข้อมูลสถิติ ข้อมูลภาพ เป็นต้น"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลประเภทอื่น ๆระบุ…",
-                                "คำอธิบาย": "ข้อมูลนอกเหนือจาก 4 ประเภทข้างต้น"
-                            }
-                        ]
-                    },
-                    "title": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "ชื่อชุดข้อมูล",
-                        "คำอธิบาย": "ชื่อของชุดข้อมูลที่กำหนดโดย องค์กรที่รับผิดชอบข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "Text (150 Characters)",
-                        "ตัวอย่าง": ""
-                    },
-                    "Org_standard_name": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "ชื่อองค์กร",
-                        "คำอธิบาย": "ชื่อองค์กรที่รับผิดชอบข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "Text (255 Characters)",
-                        "ตัวอย่าง": "ITA"
-                    },
-                    "maintainer": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "ชื่อผู้ติดต่อ",
-                        "คำอธิบาย": "ชื่อกอง สำนัก หรือฝ่าย ที่ได้รับการมอบหมายให้รับผิดชอบข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "Text (150 Characters)",
-                        "ตัวอย่าง": "กองนวัตกรรมและวิจัยกลุ่มเทคโนโลยีสารสนเทศและปัญญาประดิษฐ์"
-                    },
-                    "maintainer_email": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "อีเมล์ผู้ติดต่อ",
-                        "คำอธิบาย": "อีเมลกอง สำนัก หรือฝ่าย ที่ได้รับการมอบหมายให้รับผิดชอบข้อมูล และต้องเป็นอีเมลภาครัฐ(DDCmail)",
-                        "ตัวเลือก/รูปแบบ": "Text (50 Characters)",
-                        "ตัวอย่าง": "dir.hrd@ddc.mail.go.th"
-                    },
-                    "tag_string": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "คำสำคัญ",
-                        "คำอธิบาย": "หัวข้อ คำ วลี หรือแท็ก (tag) ที่ใช้ระบุคำสำคัญในชุดข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "Text แยกแต่ละkeywords ด้วย \",\" (comma) (200 Characters)",
-                        "ตัวอย่าง": "แรงงาน, กำลังแรงงาน"
-                    },
-                    "notes": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "รายละเอียด",
-                        "คำอธิบาย": "คำอธิบายรายละเอียดที่สำคัญ ของชุดข้อมูลอย่างสั้น เช่น คำนิยาม ชุดข้อมูลเกี่ยวกับอะไร มีวิธีการจัดเก็บแบบใด กลุ่มเป้าหมายผู้ใช้งานข้อมูล เป็นใคร",
-                        "ตัวเลือก/รูปแบบ": "Text (1,000 Characters)",
-                        "ตัวอย่าง": ""
-                    },
-                    "objective": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "วัตถุประสงค์",
-                        "คำอธิบาย": "อธิบายที่มาและวัตถุประสงค์ของ การจัดทำชุดข้อมูล เช่น กฎหมาย ภารกิจ โครงการตามแผนยุทธศาสตร์ และเพื่อใช้ในการ วิเคราะห์หรือตอบโจทย์ใน ประเด็นยุทธศาสตร์ในเรื่องใดที่ ผู้ใช้ต้องการ",
-                        "ตัวเลือก/รูปแบบ": "ตัวเลือก",
-                        "ตัวอย่าง": "พันธกิจหน่วยงาน",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "ยุทธศาสตร์ชาติ",
-                                "คำอธิบาย": "ยุทธศาสตร์ชาติตามกฎหมายว่าด้วยการจัดทำยุทธศาสตร์ชาติ ซึ่งเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาลเพื่อใช้เป็นกรอบในการจัดทาแผนต่าง ๆ ให้สอดคล้องและบูรณาการกันเพื่อให้เกิดเป็นพลังผลักดันร่วมกันไปสู่เป้าหมายดังกล่าว (รัฐธรรมนูญแห่งราชอาณาจักรไทย พ.ศ.2560 หมวด 6 แนวนโยบายแห่งรัฐ มาตรา 65) (แผนระดับที่ 1)"
-                            },
-                            {
-                                "รายการตัวเลือก": "แผนพัฒนาเศรษฐกิจและสังคมแห่งชาติ",
-                                "คำอธิบาย": "แผนสำหรับถ่ายทอดยุทธศาสตร์ชาติสู่กรอบและแนวทางในการพัฒนาประเทศในแต่ละช่วงระยะเวลา 5 ปี (แผนระดับที่ 2)"
-                            },
-                            {
-                                "รายการตัวเลือก": "แผนความมั่นคงแห่งชาติ",
-                                "คำอธิบาย": "นโยบายและแผนระดับชาติว่าด้วยความมั่นคงแห่งชาติ\" ตามกฎหมายว่าด้วยความมั่นคงแห่งชาติซึ่งเป็นนโยบายและแผนหลักของชาติที่เป็นกรอบหรือทิศทางในการดำเนินการป้องกัน แจ้งเตือน แก้ไขหรือระงับยับยั้งภัยคุกคามเพื่อธำรงไว้ซึ่งความมั่นคงแห่งชาติ ปี (แผนระดับที่ 2)"
-                            },
-                            {
-                                "รายการตัวเลือก": "พันธกิจหน่วยงาน",
-                                "คำอธิบาย": ""
-                            }
-                        ]
-                    },
-                    "update_frequency_unit": {
-                        "ลำดับ": "9.1",
-                        "ชื่อรายการไทย": "หน่วยความถี่ของการปรับปรุงข้อมูล",
-                        "คำอธิบาย": "สำหรับข้อมูลระเบียน และข้อมูลภูมิสารสนเทศเชิงพื้นที่ : ความถี่ที่ข้อมูลในระบบคลังข้อมูลถูกปรับปรุง/เพิ่ม หรือเปลี่ยนแปลงสำหรับข้อมูลสถิติ: ความถี่ในการเผยแพร่ต่อผู้ใช้ข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "ตัวเลือก ดูรายละเอียด\"รายการที่ 9.1 หน่วยความถี่ของการปรับปรุง\"",
-                        "ตัวอย่าง": "ไตรมาส",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "ปี",
-                                "คำอธิบาย": "-",
-                                "หมายเหตุ": "- กรณีที่ชุดข้อมูลมาจากหลายแหล่งและมีความถี่ของการปรับปรุงแตกต่างกันให้เลือกความถี่การปรับปรุงข้อมูลที่บ่อยที่สุด"
-                            },
-                            {
-                                "รายการตัวเลือก": "ครึ่งปี",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ไตรมาส",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "เดือน",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "สัปดาห์",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "วัน",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ตามเวลาจริง",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ไม่ทราบ",
-                                "คำอธิบาย": "-"
-                            }
-                        ]
-                    },
-                    "geo_coverage": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่",
-                        "คำอธิบาย": "สำหรับข้อมูลระเบียน และข้อมูล ภูมิสารสนเทศเชิงพื้นที่: มิติการ จัดจำแนกข้อมูลพื้นที่ในระดับ ย่อยที่สุดในการจัดเก็บข้อมูล สำหรับข้อมูลสถิติ: มิติการจัด จำแนกข้อมูลพื้นที่ในระดับย่อย ที่สุดในการนำเสนอข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "ตัวเลือก ดูรายละเอียด\"รายการที่ 10 ขอบเขตเชิงภูมิศาสตร์หรือเชิงพื้นที่\"",
-                        "ตัวอย่าง": "จังหวัด",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "ไม่มี",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "โลก",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ประเทศ",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ภาค",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "จังหวัด",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "อำเภอ",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "ตำบล",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "หมู่บ้าน",
-                                "คำอธิบาย": "-"
-                            }
-                        ]
-                    },
-                    "data_format": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "รูปแบบการเก็บข้อมูล",
-                        "คำอธิบาย": "รูปแบบของการจัดเก็บข้อมูล",
-                        "ตัวเลือก/รูปแบบ": "ตัวเลือก ดูรายละเอียด\"รายการที่ 12 รูปแบบการเก็บข้อมูล\"",
-                        "ตัวอย่าง": "XLS",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "Database",
-                                "คำอธิบาย": "-",
-                                "หมายเหตุ": "- มาตรฐานรูปแบบการจัดเก็บข้อมูลโดย Dublin Core (DCMI Metadata Terms) ไม่ได้กำหนดตัวเลือกสำหรับรูปแบบการเก็บข้อมูล (Format) ที่ชัดเจน"
-                            },
-                            {
-                                "รายการตัวเลือก": "CSV",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "XML",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "JSON",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "XLS",
-                                "คำอธิบาย": "-"
-                            },
-                            {
-                                "รายการตัวเลือก": "PDF",
-                                "คำอธิบาย": "-"
-                            }
-                        ]
-                    },
-                    "data_category": {
-                        "ลำดับ": "",
-                        "ชื่อรายการไทย": "หมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐ",
-                        "คำอธิบาย": "หมวดหมู่ข้อมูลตามธรรมาภิบาล ข้อมูลภาครัฐ",
-                        "ตัวเลือก/รูปแบบ": "ตัวเลือก ดูรายละเอียด\"รายการที่ 13 หมวดหมู่ข้อมูลตามธรรมาภิบาลข้อมูลภาครัฐ\"",
-                        "ตัวอย่าง": "ข้อมูลส่วนบุคคล",
-                        "options": [
-                            {
-                                "รายการตัวเลือก": "ข้อมูลสาธารณะ",
-                                "คำอธิบาย": "ข้อมูลที่สามารถเปิดเผยได้ สามารถนำไปใช้ได้อย่างอิสระ ไม่ว่าจะเป็นข้อมูลข่าวสาร ข้อมูลส่วนบุคคล ข้อมูลอิเล็กทรอนิกส์ เป็นต้น"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลส่วนบุคคล",
-                                "คำอธิบาย": "ข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อมแต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ (พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562)"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลความมั่นคง",
-                                "คำอธิบาย": "ข้อมูลเกี่ยวกับความมั่นคงของรัฐ ที่ทำให้เกิดความสงบเรียบร้อย การมีเสถียรภาพความเป็นปีกแผ่น ปลอดภัยจากภัยคุกคาม เป็นต้น"
-                            },
-                            {
-                                "รายการตัวเลือก": "ข้อมูลความลับทางราชการ",
-                                "คำอธิบาย": "ข้อมูลที่อยู่ในความครอบครองหรือควบคุมดูแลของหน่วยงานของรัฐที่มีคำสั่งไม่ให้มีการเปิดเผย และมีการกำหนดชั้นความลับของข้อมูล"
-                            }
-                        ]
+                        "ตัวอย่าง": "ข้อมูลสถิติ"
                     }
-                });
+                };
+                
+                // Load metadata from GitHub
+                const loadMetadata = async () => {
+                    try {
+                        isLoading.value = true;
+                        loadError.value = null;
+                        
+                        const response = await fetch(METADATA_URL);
+                        if (!response.ok) {
+                            throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
+                        }
+                        
+                        const data = await response.json();
+                        jsonData.value = data;
+                        console.log('Metadata loaded successfully from GitHub:', Object.keys(data).length, 'items');
+                        
+                    } catch (error) {
+                        console.warn('Failed to load metadata from GitHub:', error.message);
+                        console.log('Using fallback data');
+                        loadError.value = error.message;
+                        jsonData.value = fallbackData;
+                    } finally {
+                        isLoading.value = false;
+                    }
+                };
 
                 // Transform JSON data to array format
                 const metadataItems = computed(() => {
@@ -649,18 +498,7 @@
                     });
                 });
 
-                // Original hardcoded data for fallback
-                const fallbackMetadataItems = ref([
-                    {
-                        id: '1',
-                        nameThai: 'ประเภทข้อมูล',
-                        technicalName: 'data_type',
-                        description: 'ชุดข้อมูลนี้เป็นข้อมูลประเภทใด',
-                        format: 'ตัวเลือก ดูรายละเอียด "รายการที่ 1 ประเภทข้อมูล"',
-                        example: 'ข้อมูลสถิติ',
-                        category: 'ข้อมูลพื้นฐาน'
-                    },
-                ]);
+
 
                 const categories = computed(() => {
                     const cats = [...new Set(metadataItems.value.map(item => item.category))];
@@ -811,7 +649,10 @@
                     selectedCategory.value = '';
                 };
 
-                onMounted(() => {
+                onMounted(async () => {
+                    // Load metadata from GitHub
+                    await loadMetadata();
+                    
                     // Animate elements on load
                     const fadeElements = document.querySelectorAll('.fade-in');
                     gsap.fromTo(fadeElements, 
@@ -858,6 +699,8 @@
                     clickedRowPosition,
                     isEmbedded,
                     jsonData,
+                    isLoading,
+                    loadError,
                     metadataItems,
                     categories,
                     filteredMetadata,
