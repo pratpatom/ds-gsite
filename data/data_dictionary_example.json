@@ -1,0 +1,122 @@
+[
+  {
+    "variable": "id",
+    "description": "ลำดับโครงการ",
+    "details": null
+  },
+  {
+    "variable": "users_id",
+    "description": "เลขประจำตัวประชาชน",
+    "details": null
+  },
+  {
+    "variable": "users_name",
+    "description": "ชื่อ/สกุลของผู้ใช้งาน",
+    "details": null
+  },
+  {
+    "variable": "devision_name",
+    "description": "ชื่อหน่วยงาน",
+    "details": null
+  },
+  {
+    "variable": "pro_name_en",
+    "description": "ชื่อโครงการภาษาอังกฤษ",
+    "details": null
+  },
+  {
+    "variable": "pro_name_th",
+    "description": "ชื่อโครงการภาษาไทย",
+    "details": null
+  },
+  {
+    "variable": "pro_position",
+    "description": "ตำแหน่งในโครงการวิจัย",
+    "details": "1 = ผู้วิจัยหลัก, 2 = ผู้วิจัยหลัก-ร่วม, 3 = ผู้วิจัยร่วม, 4 = ผู้ช่วยวิจัย, 5 = ที่ปรึกษาโครงการ"
+  },
+  {
+    "variable": "pro_co_researcher",
+    "description": "จำนวนผู้วิจัยร่วม : ไม่รวมผู้วิจัยหลักและที่ปรึกษาโครงการ",
+    "details": "จำนวนผู้วิจัยคือ 0 - มากกว่า 10"
+  },
+  {
+    "variable": "pro_start_date",
+    "description": "ปีที่เริ่มโครงการ",
+    "details": null
+  },
+  {
+    "variable": "pro_end_date",
+    "description": "ปีที่แล้วเสร็จโครงการ",
+    "details": null
+  },
+  {
+    "variable": "publish_status",
+    "description": "โครงการวิจัยได้รับการตีพิมพ์ในวารสารวิชาการ",
+    "details": "การตีพิมพ์ 1 = ใช่, 2 = ไม่ใช่"
+  },
+  {
+    "variable": "url_research",
+    "description": "URL ที่อยู่ ออนไลน์ของรายงานวิจัยฉบับสมบูรณ์",
+    "details": null
+  },
+  {
+    "variable": "files",
+    "description": "ชื่อไฟล์ที่ upload : รายงานวิจัยฉบับสมบูรณ์.pdf",
+    "details": null
+  },
+  {
+    "variable": "verified",
+    "description": "สถานะการตรวจสอบ",
+    "details": "null = รอตรวจสอบ, 1 = ตรวจสอบแล้ว, 2 = อยู่ระหว่างตรวจสอบ, 3 = อยู่ระหว่างแก้ไข, 9 = ไม่ตรงเงื่อนไข"
+  },
+  {
+    "variable": "created_at",
+    "description": "วันที่เพิ่มข้อมูล",
+    "details": null
+  },
+  {
+    "variable": "updated_at",
+    "description": "วันที่อัพเดทข้อมูล",
+    "details": null
+  },
+  {
+    "variable": "deleted_users",
+    "description": "วันที่ลบข้อมูล",
+    "details": null
+  },
+  {
+    "variable": "researcher_level",
+    "description": "ระดับนักวิจัยแต่ละระดับ",
+    "details": "ระดับนักวิจัย 1 = นักวิจัยฝึกหัด, 2 = นักวิจัยรุ่นใหม่, 3 = นักวิจัยรุ่นกลาง, 4 = นักวิจัยอาวุโส"
+  },
+  {
+    "variable": "article_name_th",
+    "description": "ชื่อบทความภาษาไทย",
+    "details": null
+  },
+  {
+    "variable": "article_name_eng",
+    "description": "ชื่อบทความภาษาอังกฤษ",
+    "details": null
+  },
+  {
+    "variable": "journal_name_th",
+    "description": "ชื่อวารสารภาษาไทย",
+    "details": null
+  },
+  {
+    "variable": "journal_name_eng",
+    "description": "ชื่อวารสารภาษาอังกฤษ",
+    "details": null
+  },
+  {
+    "variable": "article_url",
+    "description": "URL ที่อยู่ออนไลน์ของบทความ",
+    "details": null
+  },
+  {
+    "variable": "fiscal_year",
+    "description": "ปีงบประมาณ",
+    "details": "ปีงบประมาณที่บันทึกข้อมูล"
+  }
+]

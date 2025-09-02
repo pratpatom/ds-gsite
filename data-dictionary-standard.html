@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนวทางการจัดทำ Data Dictionary</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Sarabun', sans-serif; }
+        .fade-in { opacity: 0; transform: translateY(20px); }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="app">
+        <div class="container mx-auto px-4 py-8">
+            <!-- Header Section -->
+            <header class="text-center mb-12 fade-in">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">แนวทางการจัดทำ Data Dictionary</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    มาตรฐานการจัดทำพจนานุกรมข้อมูลเพื่อความเข้าใจที่ชัดเจนและสม่ำเสมอในการจัดการข้อมูล
+                </p>
+            </header>
+
+            <!-- Standard Table Section -->
+            <section class="mb-16 fade-in">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-600 text-white px-6 py-4">
+                        <h2 class="text-2xl font-semibold">มาตรฐาน Data Dictionary</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th v-for="header in standardHeaders" :key="header" 
+                                        class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">
+                                        {{ header }}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item, index) in standardData" :key="index" 
+                                    class="hover:bg-gray-50 transition-colors duration-200"
+                                    :class="index % 2 === 0 ? 'bg-white' : 'bg-gray-25'">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 border-b">{{ item.No }}</td>
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900 border-b">{{ item['ชื่อรายการ'] }}</td>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b">{{ item['คำอธิบาย'] }}</td>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b">
+                                        <div class="whitespace-pre-line">{{ item['ตัวเลือก / รูปแบบ'] }}</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Example Table Section -->
+            <section class="fade-in">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-green-600 text-white px-6 py-4">
+                        <h2 class="text-2xl font-semibold">ตัวอย่างการนำไปใช้</h2>
+                        <p class="text-green-100 mt-1">ข้อมูลตัวอย่างที่แปลงให้ตรงกับมาตรฐาน</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Name</th>
+                                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Data Type</th>
+                                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">คำอธิบาย</th>
+                                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Required</th>
+                                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item, index) in exampleData" :key="index" 
+                                    class="hover:bg-gray-50 transition-colors duration-200"
+                                    :class="index % 2 === 0 ? 'bg-white' : 'bg-gray-25'">
+                                    <td class="px-6 py-4 text-sm font-mono text-blue-600 border-b">{{ item.name }}</td>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b">{{ item.dataType }}</td>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b">{{ item.description }}</td>
+                                    <td class="px-6 py-4 text-sm border-b">
+                                        <span :class="item.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'" 
+                                              class="px-2 py-1 rounded-full text-xs font-medium">
+                                            {{ item.required ? 'YES' : 'NO' }}
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-600 border-b">
+                                        <div class="whitespace-pre-line">{{ item.example }}</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="mt-16 text-center text-gray-500 fade-in">
+                <p class="text-sm">© 2024 Data Dictionary Standard - สร้างขึ้นเพื่อการจัดการข้อมูลที่มีประสิทธิภาพ</p>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module">
+        const { createApp, ref, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                const standardData = ref([]);
+                const exampleData = ref([]);
+                const standardHeaders = ref(['No', 'ชื่อรายการ', 'คำอธิบาย', 'ตัวเลือก / รูปแบบ']);
+
+                // Load standard data
+                const loadStandardData = async () => {
+                    try {
+                        const response = await fetch('./data/data_dictionary_std.json');
+                        standardData.value = await response.json();
+                    } catch (error) {
+                        console.error('Error loading standard data:', error);
+                        // Fallback data
+                        standardData.value = [
+                            {
+                                "No": 1,
+                                "ชื่อรายการ": "Name",
+                                "คำอธิบาย": "ชื่อตัวแปรข้อมูล",
+                                "ตัวเลือก / รูปแบบ": "Text"
+                            },
+                            {
+                                "No": 2,
+                                "ชื่อรายการ": "Data Type",
+                                "คำอธิบาย": "ชนิดของตัวแปรข้อมูล",
+                                "ตัวเลือก / รูปแบบ": "เลือกให้ตัวอย่างกลุ่มของชนิดข้อมูลสำหรับ Data Dictionary จากแหล่งต่าง ๆ เช่น MariaDB Data Types, Microsoft Access Data Types, JSON Data Types เป็นต้น"
+                            },
+                            {
+                                "No": 3,
+                                "ชื่อรายการ": "คำอธิบาย",
+                                "คำอธิบาย": "คำอธิบายตัวแปรข้อมูล",
+                                "ตัวเลือก / รูปแบบ": "Text"
+                            },
+                            {
+                                "No": 4,
+                                "ชื่อรายการ": "Required",
+                                "คำอธิบาย": "ข้อมูลไม่สามารถเป็นค่าว่าง (null) ได้หรือไม่",
+                                "ตัวเลือก / รูปแบบ": "สำหรับฐานข้อมูลเลือก YES / NO\nสำหรับชุดข้อมูลอื่น ๆ เลือก true / false"
+                            },
+                            {
+                                "No": 5,
+                                "ชื่อรายการ": "Example",
+                                "คำอธิบาย": "แสดงข้อมูลจริงจากหนึ่งตัวอย่างข้อมูล (sample)",
+                                "ตัวเลือก / รูปแบบ": "ขึ้นอยู่กับตัวอย่างข้อมูล"
+                            }
+                        ];
+                    }
+                };
+
+                // Transform example data to match standard format
+                const loadExampleData = async () => {
+                    try {
+                        const response = await fetch('./data/data_dictionary_example.json');
+                        const rawData = await response.json();
+                        
+                        // Transform data to match standard format
+                        exampleData.value = rawData.slice(0, 10).map(item => ({
+                            name: item.variable,
+                            dataType: inferDataType(item.variable, item.description, item.details),
+                            description: item.description,
+                            required: isRequired(item.variable),
+                            example: getExample(item.variable, item.details)
+                        }));
+                    } catch (error) {
+                        console.error('Error loading example data:', error);
+                        // Fallback example data
+                        exampleData.value = [
+                            {
+                                name: 'id',
+                                dataType: 'INTEGER',
+                                description: 'ลำดับโครงการ',
+                                required: true,
+                                example: '1, 2, 3, ...'
+                            },
+                            {
+                                name: 'users_name',
+                                dataType: 'VARCHAR(255)',
+                                description: 'ชื่อ/สกุลของผู้ใช้งาน',
+                                required: true,
+                                example: 'นายสมชาย ใจดี'
+                            }
+                        ];
+                    }
+                };
+
+                // Helper functions to infer data types and examples
+                const inferDataType = (variable, description, details) => {
+                    if (variable.includes('id') || variable.includes('level')) return 'INTEGER';
+                    if (variable.includes('date')) return 'DATE';
+                    if (variable.includes('url')) return 'TEXT';
+                    if (variable.includes('status') || variable.includes('position')) return 'INTEGER';
+                    if (variable.includes('name')) return 'VARCHAR(255)';
+                    if (variable.includes('year')) return 'YEAR';
+                    if (variable.includes('verified') || variable.includes('publish')) return 'BOOLEAN';
+                    return 'TEXT';
+                };
+
+                const isRequired = (variable) => {
+                    const requiredFields = ['id', 'users_id', 'users_name', 'pro_name_th', 'pro_start_date'];
+                    return requiredFields.includes(variable);
+                };
+
+                const getExample = (variable, details) => {
+                    if (details) return details;
+                    
+                    const examples = {
+                        'id': '1, 2, 3',
+                        'users_id': '1234567890123',
+                        'users_name': 'นายสมชาย ใจดี',
+                        'devision_name': 'คณะวิทยาศาสตร์',
+                        'pro_name_en': 'Data Science Research',
+                        'pro_name_th': 'การวิจัยวิทยาศาสตร์ข้อมูล',
+                        'pro_start_date': '2024',
+                        'pro_end_date': '2025',
+                        'created_at': '2024-01-15 10:30:00',
+                        'updated_at': '2024-01-20 14:45:00',
+                        'fiscal_year': '2567'
+                    };
+                    
+                    return examples[variable] || 'ตัวอย่างข้อมูล';
+                };
+
+                // Animation setup
+                const animateElements = () => {
+                    gsap.fromTo('.fade-in', 
+                        { opacity: 0, y: 30 }, 
+                        { 
+                            opacity: 1, 
+                            y: 0, 
+                            duration: 0.8, 
+                            stagger: 0.2,
+                            ease: 'power2.out'
+                        }
+                    );
+                };
+
+                onMounted(async () => {
+                    await Promise.all([loadStandardData(), loadExampleData()]);
+                    setTimeout(animateElements, 100);
+                });
+
+                return {
+                    standardData,
+                    exampleData,
+                    standardHeaders
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
